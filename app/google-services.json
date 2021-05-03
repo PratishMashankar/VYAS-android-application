@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "142637805750",
+    "project_id": "homelibrarymanagement",
+    "storage_bucket": "homelibrarymanagement.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142637805750:android:877b5a381f265b9df73617",
+        "android_client_info": {
+          "package_name": "com.pratishaad.homelibrarymanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142637805750-d4qa18qb4ni7eqjsishl5e35t6cdcif6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pratishaad.homelibrarymanagement",
+            "certificate_hash": "51ae06a3113c1cbd7dc78b175f33d0165f4dcef3"
+          }
+        },
+        {
+          "client_id": "142637805750-bp63ub45ih087u7gcsp06uavan22vnff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf_KdjCOwanaGACgFdX-p7ZDOlGBx07Yk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142637805750-bp63ub45ih087u7gcsp06uavan22vnff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
