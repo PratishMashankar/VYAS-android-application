@@ -16,8 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
 
         <activity android:name=".AddBook2"/>
+=======
+        <activity android:name=".BibliophileCompanion"></activity>
+>>>>>>> 2a82732b75f3f03d99b4d9506d3c66f519abdb46
         <activity android:name=".ViewLentBooks" />
         <activity android:name=".LendBook" />
         <activity android:name=".ViewBooks" />
@@ -42,6 +46,29 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
     </application>
 
+<<<<<<< HEAD
+=======
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+
+>>>>>>> 2a82732b75f3f03d99b4d9506d3c66f519abdb46
 </manifest>

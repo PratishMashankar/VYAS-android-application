@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity {
 
-    EditText mUname, mEmail, mPassword,mRepass;
+    EditText mUname, mEmail, mPassword, mRepass;
     Button mRegisterBtn;
     TextView mLoginBtn;
     FirebaseAuth fAuth;
