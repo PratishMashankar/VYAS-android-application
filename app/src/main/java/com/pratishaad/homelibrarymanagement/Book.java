@@ -7,21 +7,21 @@ public class Book {
     String bookISBN;
     String bookGenre;
     String bookDescription;
-    String coverImageName;
+    String imageFirebaseURI;
 
 
     public Book(){
 
     }
 
-    public Book(String bookId, String bookTitle, String bookAuthor, String bookISBN, String bookDescription, String bookGenre, String coverImageName){
+    public Book(String bookId, String bookTitle, String bookAuthor, String bookISBN, String bookDescription, String bookGenre, String imageFirebaseURI){
         this.bookId=bookId;
         this.bookTitle=bookTitle;
         this.bookAuthor=bookAuthor;
         this.bookISBN=bookISBN;
         this.bookGenre=bookGenre;
         this.bookDescription=bookDescription;
-        this.coverImageName=coverImageName;
+        this.imageFirebaseURI=imageFirebaseURI;
     }
 
     public String getBookId() {
@@ -48,7 +48,7 @@ public class Book {
         return bookDescription;
     }
 
-    public String getCoverImageName() {
-        return coverImageName;
+    public String getImageFirebaseURI() {
+        return imageFirebaseURI;
     }
 }
