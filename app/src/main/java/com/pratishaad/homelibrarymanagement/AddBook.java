@@ -9,9 +9,12 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +28,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.label.ImageLabel;
 import com.google.mlkit.vision.label.ImageLabeler;
@@ -34,6 +40,9 @@ import com.google.mlkit.vision.text.Text;
 import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.TextRecognizer;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class AddBook extends AppCompatActivity {
@@ -46,8 +55,11 @@ public class AddBook extends AppCompatActivity {
     //DatabaseReference
     DatabaseReference databaseBooks;
     String userID;
+    Uri FilePathUri;
 
     FirebaseAuth fAuth;
+
+    StorageReference storageRef;
 
 
 
@@ -86,6 +98,8 @@ public class AddBook extends AppCompatActivity {
         //getting user ID under which books are to be added
         databaseBooks= FirebaseDatabase.getInstance().getReference();
 
+        storageRef = FirebaseStorage.getInstance().getReference();
+
 
 
         //check app level permission given for camera
@@ -114,6 +128,7 @@ public class AddBook extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 addBook();
+                //uid of book, add im,age to this uid
             }
         });
     }
@@ -136,6 +151,12 @@ public class AddBook extends AppCompatActivity {
         Bitmap bitmap = (Bitmap) bundle.get("data");
         //set image to image view
         if(requestCode==105) {
+            //FilePathUri =  data.getData(); //new added
+            String fpu="hello";
+
+            File photofile = createImageFile();
+
+            Toast.makeText(getApplicationContext(),fpu,Toast.LENGTH_SHORT).show();
             coverimg.setImageBitmap(bitmap);
         }
         else if(requestCode==101) titleimg.setImageBitmap(bitmap);
@@ -168,28 +189,59 @@ public class AddBook extends AppCompatActivity {
                                 });
     }
 
-    //DADD BOOK TO FIREBASE
+    private File createImageFile() {
+        // Create an image file name
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String imageFileName = "JPEG_" + timeStamp + "_";
+        String storageDir = Environment.getExternalStorageDirectory() + "/picupload";
+        File dir = new File(storageDir);
+        if (!dir.exists())
+            dir.mkdir();
+
+        File image = new File(storageDir + "/" + imageFileName + ".jpg");
+
+        // Save a file: path for use with ACTION_VIEW intents
+        String mCurrentPhotoPath = image.getAbsolutePath();
+        Log.e("photo path = " , mCurrentPhotoPath);
+
+        return image;
+    }
+
+    //ADD BOOK TO FIREBASE
     protected void addBook(){
         String mTitle=title.getText().toString().trim();
         String mAuthor=author.getText().toString().trim();
         String mISBN=ifbn.getText().toString().trim();
         String mDescription=desc.getText().toString().trim();
         String mGenre=genre.getSelectedItem().toString();
-        String mCoverImageName="Error displaying image";
+        String mImageFirebaseURI="TempUri";
 
-        if(!TextUtils.isEmpty(mTitle)){
+        if(!(TextUtils.isEmpty(mTitle))){
+            //mImageFirebaseURI=uploadImageToFirebase(mTitle,FilePathUri);
             String uid=fAuth.getUid();
             String books="AllBooks";
-            databaseBooks.child(uid).push();
+            //databaseBooks.child(uid).push();
             String bookID = databaseBooks.child(uid).push().getKey();
-            Book book = new Book(bookID,mTitle,mAuthor,mISBN,mDescription,mGenre,mCoverImageName);
+            Book book = new Book(bookID,mTitle,mAuthor,mISBN,mDescription,mGenre,mImageFirebaseURI);
             databaseBooks.child(uid).child(books).child(bookID).setValue(book);
             Toast.makeText(getApplicationContext(),"This Book has been added ",Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(getApplicationContext(),"Title is mandatory",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Book Failed to ADD",Toast.LENGTH_SHORT).show();
         }
     }
 
+    private String uploadImageToFirebase(String mTitle, Uri filePathUri) {
+        final String[] mImageFirebaseURI = {""};
+        final StorageReference mImgRef = storageRef.child("images/"+mTitle);
+        mImgRef.putFile(filePathUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                Toast.makeText(getApplicationContext(),"Image successfully uploaded",Toast.LENGTH_SHORT).show();
+                mImageFirebaseURI[0] = mImgRef.getDownloadUrl().toString();
+            }
+        });
+        return mImageFirebaseURI[0];
+    }
 
 
 }

@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button lendbook;
     Button viewlentbooks;
     Button logout;
+    Button bibcom;
     FirebaseAuth fAuth;
 
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         lendbook = (Button) findViewById(R.id.lendbook);
         viewlentbooks = (Button) findViewById(R.id.viewlentbooks);
         logout = (Button) findViewById(R.id.logoutbtn);
+        bibcom = (Button) findViewById(R.id.bibcom) ;
         fAuth = FirebaseAuth.getInstance();
 
         viewbooks.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),ViewLentBooks.class));
             }
         });
+
+        bibcom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),BibliophileCompanion.class));
+            }
+        });
+
+
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
