@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.Manifest;
 import android.app.DirectAction;
 import android.content.ActivityNotFoundException;
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -17,7 +16,6 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -49,24 +47,20 @@ import java.util.List;
 
 public class AddBook extends AppCompatActivity {
 
-    EditText title, author, ifbn, desc;
-    ImageView coverimg, titleimg, authimg, ifbnimg, descimg;
+    EditText title,author,ifbn,desc;
+    ImageView coverimg,titleimg,authimg,ifbnimg,descimg;
     Spinner genre;
     Button addbook, addanotherbook, clearbtn;
     final int REQUEST_IMAGE_CAPTURE = 1;
     //DatabaseReference
     DatabaseReference databaseBooks;
-    StorageReference storageReference;
     String userID;
     Uri FilePathUri;
-<<<<<<< HEAD
-    String TaskSnapShot;
-=======
 
->>>>>>> 2a82732b75f3f03d99b4d9506d3c66f519abdb46
     FirebaseAuth fAuth;
 
     StorageReference storageRef;
+
 
 
     @Override
@@ -74,21 +68,21 @@ public class AddBook extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_book);
 
-        title = (EditText) findViewById(R.id.title);
-        author = (EditText) findViewById(R.id.author);
-        ifbn = (EditText) findViewById(R.id.ifbn);
-        desc = (EditText) findViewById(R.id.desc);
+        title=(EditText)findViewById(R.id.title);
+        author=(EditText)findViewById(R.id.author);
+        ifbn=(EditText)findViewById(R.id.ifbn);
+        desc=(EditText)findViewById(R.id.desc);
 
-        coverimg = (ImageView) findViewById(R.id.coverimg);
-        titleimg = (ImageView) findViewById(R.id.titleimg);
-        authimg = (ImageView) findViewById(R.id.authimg);
-        ifbnimg = (ImageView) findViewById(R.id.ifbnimg);
-        descimg = (ImageView) findViewById(R.id.descimg);
+        coverimg=(ImageView)findViewById(R.id.coverimg);
+        titleimg=(ImageView)findViewById(R.id.titleimg);
+        authimg=(ImageView)findViewById(R.id.authimg);
+        ifbnimg=(ImageView)findViewById(R.id.ifbnimg);
+        descimg=(ImageView)findViewById(R.id.descimg);
 
-        genre = (Spinner) findViewById(R.id.genre);
+        genre=(Spinner)findViewById(R.id.genre);
 
-        addbook = (Button) findViewById(R.id.addbook);
-        clearbtn = (Button) findViewById(R.id.clear);
+        addbook=(Button)findViewById(R.id.addbook);
+        clearbtn=(Button)findViewById(R.id.clear);
 
         coverimg.setImageResource(R.drawable.camera);
         titleimg.setImageResource(R.drawable.camera);
@@ -100,21 +94,17 @@ public class AddBook extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
 
 
+
         //getting user ID under which books are to be added
-<<<<<<< HEAD
-        databaseBooks = FirebaseDatabase.getInstance().getReference();//for realtime database reference
-        storageReference = FirebaseStorage.getInstance().getReference("Images");//storage
-=======
         databaseBooks= FirebaseDatabase.getInstance().getReference();
 
         storageRef = FirebaseStorage.getInstance().getReference();
 
->>>>>>> 2a82732b75f3f03d99b4d9506d3c66f519abdb46
 
 
         //check app level permission given for camera
-        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            requestPermissions(new String[]{Manifest.permission.CAMERA}, 101);
+        if(checkSelfPermission(Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
+            requestPermissions(new String[]{Manifest.permission.CAMERA},101);
         }
 
         //Clear Button
@@ -133,19 +123,18 @@ public class AddBook extends AppCompatActivity {
             }
         });
 
+        //Add Book to Firebase Database
         addbook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD
-                Log.println(Log.INFO,"","In AddBook");
-=======
                 addBook();
                 //uid of book, add im,age to this uid
->>>>>>> 2a82732b75f3f03d99b4d9506d3c66f519abdb46
             }
         });
-
     }
+
+
+    //IMAGE TO TEXT CODE
     public void captureImage(View view){
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if((view.toString()).equals(findViewById(R.id.coverimg).toString())) startActivityForResult(intent, 105);
@@ -154,18 +143,10 @@ public class AddBook extends AppCompatActivity {
         else if((view.toString()).equals(findViewById(R.id.ifbnimg).toString())) startActivityForResult(intent, 103);
         else if((view.toString()).equals(findViewById(R.id.descimg).toString())) startActivityForResult(intent, 104);
     }
-
-
-
     @Override
     protected void onActivityResult(final int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Bundle bundle = data.getExtras();
-<<<<<<< HEAD
-        Bitmap bitmap=(Bitmap) bundle.get("data");
-        if(requestCode==105)
-        {
-=======
         //extract image from bundle
         Bitmap bitmap = (Bitmap) bundle.get("data");
         //set image to image view
@@ -176,13 +157,38 @@ public class AddBook extends AppCompatActivity {
             File photofile = createImageFile();
 
             Toast.makeText(getApplicationContext(),fpu,Toast.LENGTH_SHORT).show();
->>>>>>> 2a82732b75f3f03d99b4d9506d3c66f519abdb46
             coverimg.setImageBitmap(bitmap);
         }
+        else if(requestCode==101) titleimg.setImageBitmap(bitmap);
+        else if(requestCode==102) authimg.setImageBitmap(bitmap);
+        else if(requestCode==103) ifbnimg.setImageBitmap(bitmap);
+        else if(requestCode==104) descimg.setImageBitmap(bitmap);
+        //process the image to extract image
+        InputImage image = InputImage.fromBitmap(bitmap, 0);
+        TextRecognizer recognizer = TextRecognition.getClient();
+        Task<Text> result =
+                recognizer
+                        .process(image)
+                        .addOnSuccessListener(new OnSuccessListener<Text>() {
+                            @Override
+                            public void onSuccess(Text visionText) {
+                                //Toast.makeText(getApplicationContext(),visionText.getText(),Toast.LENGTH_SHORT).show();
+                                if(requestCode==101) title.setText(visionText.getText());
+                                else if(requestCode==102) author.setText(visionText.getText());
+                                else if(requestCode==103) ifbn.setText(visionText.getText());
+                                else if(requestCode==104) desc.setText(visionText.getText());
+
+                            }
+                        })
+                        .addOnFailureListener(
+                                new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(getApplicationContext(),"Error!",Toast.LENGTH_SHORT).show();
+                                    }
+                                });
     }
 
-<<<<<<< HEAD
-=======
     private File createImageFile() {
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
@@ -237,42 +243,5 @@ public class AddBook extends AppCompatActivity {
         return mImageFirebaseURI[0];
     }
 
->>>>>>> 2a82732b75f3f03d99b4d9506d3c66f519abdb46
 
-//        //extract image from bundle
-//        Bitmap bitmap = (Bitmap) bundle.get("data");
-//        //set image to image view
-//        if(requestCode==105) {
-//            FilePathUri = data.getData();//newly added
-//            coverimg.setImageBitmap(bitmap);
-//        }
-//        else if(requestCode==101) titleimg.setImageBitmap(bitmap);
-//        else if(requestCode==102) authimg.setImageBitmap(bitmap);
-//        else if(requestCode==103) ifbnimg.setImageBitmap(bitmap);
-//        else if(requestCode==104) descimg.setImageBitmap(bitmap);
-//        //process the image to extract image
-//        InputImage image = InputImage.fromBitmap(bitmap, 0);
-//        TextRecognizer recognizer = TextRecognition.getClient();
-//        Task<Text> result =
-//                recognizer
-//                        .process(image)
-//                        .addOnSuccessListener(new OnSuccessListener<Text>() {
-//                            @Override
-//                            public void onSuccess(Text visionText) {
-//                                //Toast.makeText(getApplicationContext(),visionText.getText(),Toast.LENGTH_SHORT).show();
-//                                if(requestCode==101) title.setText(visionText.getText());
-//                                else if(requestCode==102) author.setText(visionText.getText());
-//                                else if(requestCode==103) ifbn.setText(visionText.getText());
-//                                else if(requestCode==104) desc.setText(visionText.getText());
-//
-//                            }
-//                        })
-//                        .addOnFailureListener(
-//                                new OnFailureListener() {
-//                                    @Override
-//                                    public void onFailure(@NonNull Exception e) {
-//                                        Toast.makeText(getApplicationContext(),"Error!",Toast.LENGTH_SHORT).show();
-//                                    }
-//                                });
-//    }
 }

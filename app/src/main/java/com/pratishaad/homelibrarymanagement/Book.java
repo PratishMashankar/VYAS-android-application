@@ -7,42 +7,30 @@ public class Book {
     String bookISBN;
     String bookGenre;
     String bookDescription;
-<<<<<<< HEAD
     String coverImageName;
     String coverImageUrl;
-=======
     String imageFirebaseURI;
->>>>>>> 2a82732b75f3f03d99b4d9506d3c66f519abdb46
 
 
-    public Book(){
+    public Book() {
 
     }
 
-<<<<<<< HEAD
-    public Book(String bookId, String bookTitle, String bookAuthor, String bookISBN, String bookDescription, String bookGenre,String coverImageUrl){
-=======
-    public Book(String bookId, String bookTitle, String bookAuthor, String bookISBN, String bookDescription, String bookGenre, String imageFirebaseURI){
->>>>>>> 2a82732b75f3f03d99b4d9506d3c66f519abdb46
-        this.bookId=bookId;
-        this.bookTitle=bookTitle;
-        this.bookAuthor=bookAuthor;
-        this.bookISBN=bookISBN;
-        this.bookGenre=bookGenre;
-        this.bookDescription=bookDescription;
-<<<<<<< HEAD
+    public Book(String bookId, String bookTitle, String bookAuthor, String bookISBN, String bookDescription, String bookGenre, String imageFirebaseURI) {
+        this.bookId = bookId;
+        this.bookTitle = bookTitle;
+        this.bookAuthor = bookAuthor;
+        this.bookISBN = bookISBN;
+        this.bookGenre = bookGenre;
+        this.bookDescription = bookDescription;
 //        this.coverImageName=coverImageName;
-        this.coverImageUrl=coverImageUrl;
+        this.coverImageUrl = coverImageUrl;
     }
 
-    public Book(String coverImageName, String coverImageUrl)
-    {
-        this.coverImageName=coverImageName;
-        this.coverImageUrl=coverImageUrl;
-
-=======
-        this.imageFirebaseURI=imageFirebaseURI;
->>>>>>> 2a82732b75f3f03d99b4d9506d3c66f519abdb46
+    public Book(String coverImageName, String coverImageUrl) {
+        this.coverImageName = coverImageName;
+        this.coverImageUrl = coverImageUrl;
+        this.imageFirebaseURI = imageFirebaseURI;
     }
 
     public String getBookId() {
@@ -69,16 +57,14 @@ public class Book {
         return bookDescription;
     }
 
-<<<<<<< HEAD
 //    public String getCoverImageName() {
 //        return coverImageName;
 //    }
 
-    public String getCoverImageURL(){
+    public String getCoverImageURL() {
         return coverImageUrl;
-=======
-    public String getImageFirebaseURI() {
-        return imageFirebaseURI;
->>>>>>> 2a82732b75f3f03d99b4d9506d3c66f519abdb46
+    }
+    public String getImageFirebaseURI () {
+         return imageFirebaseURI;
     }
 }
