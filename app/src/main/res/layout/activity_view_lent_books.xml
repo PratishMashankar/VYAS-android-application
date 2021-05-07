@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ViewLentBooks">
 
+    <include layout="@layout/activity_view_books"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

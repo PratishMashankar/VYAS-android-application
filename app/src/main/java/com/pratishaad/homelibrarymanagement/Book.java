@@ -8,20 +8,29 @@ public class Book {
     String bookGenre;
     String bookDescription;
     String coverImageName;
+    String coverImageUrl;
 
 
     public Book(){
 
     }
 
-    public Book(String bookId, String bookTitle, String bookAuthor, String bookISBN, String bookDescription, String bookGenre, String coverImageName){
+    public Book(String bookId, String bookTitle, String bookAuthor, String bookISBN, String bookDescription, String bookGenre,String coverImageUrl){
         this.bookId=bookId;
         this.bookTitle=bookTitle;
         this.bookAuthor=bookAuthor;
         this.bookISBN=bookISBN;
         this.bookGenre=bookGenre;
         this.bookDescription=bookDescription;
+//        this.coverImageName=coverImageName;
+        this.coverImageUrl=coverImageUrl;
+    }
+
+    public Book(String coverImageName, String coverImageUrl)
+    {
         this.coverImageName=coverImageName;
+        this.coverImageUrl=coverImageUrl;
+
     }
 
     public String getBookId() {
@@ -48,7 +57,11 @@ public class Book {
         return bookDescription;
     }
 
-    public String getCoverImageName() {
-        return coverImageName;
+//    public String getCoverImageName() {
+//        return coverImageName;
+//    }
+
+    public String getCoverImageURL(){
+        return coverImageUrl;
     }
 }

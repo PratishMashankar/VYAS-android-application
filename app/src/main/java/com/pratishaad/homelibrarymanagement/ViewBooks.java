@@ -51,6 +51,7 @@ public class ViewBooks extends AppCompatActivity {
                         else {
                             //Log.d("firebase", String.valueOf(task.getResult().getValue()));
                             bookDetails.setText(String.valueOf(task.getResult().getValue()));
+                            bookDetails.setVisibility(View.VISIBLE);
                         }
                     }
                 });
