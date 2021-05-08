@@ -10,6 +10,7 @@ public class Book {
     String coverImageName;
     String coverImageUrl;
     String imageFirebaseURI;
+    String imageFirebaseURI2;
 
 
     public Book() {
