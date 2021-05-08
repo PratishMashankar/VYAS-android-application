@@ -8,6 +8,7 @@ public class Book {
     String bookGenre;
     String bookDescription;
     String imageFirebaseURI;
+    String imageFirebaseURI2;
 
 
     public Book(){
