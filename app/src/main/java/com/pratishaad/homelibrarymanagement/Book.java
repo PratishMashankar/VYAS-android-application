@@ -10,14 +10,9 @@ public class Book {
     String bookISBN;
     String bookGenre;
     String bookDescription;
-    String coverImageName;
     String coverImageUrl;
     String imageFirebaseURI;
 
-
-    public Book() {
-
-    }
 
     public Book(String bookId, String bookTitle, String bookAuthor, String bookISBN, String bookDescription, String bookGenre, String imageFirebaseURI) {
         this.bookId = bookId;
@@ -27,10 +22,6 @@ public class Book {
         this.bookGenre = bookGenre;
         this.bookDescription = bookDescription;
         this.imageFirebaseURI = imageFirebaseURI;
-    }
-
-    public String getBookId() {
-        return bookId;
     }
 
     public String getBookTitle() {
