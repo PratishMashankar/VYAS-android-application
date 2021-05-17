@@ -1,15 +1,14 @@
 package com.pratishaad.homelibrarymanagement;
 
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -149,7 +148,7 @@ public class ViewBooks extends AppCompatActivity {
 
 //    rImage = findViewById(R.id.rImage);
 
-    // we will get the default FirebaseDatabase instance
+// we will get the default FirebaseDatabase instance
 
 //    @Override
 //    protected void onStart() {
