@@ -6,6 +6,8 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
@@ -26,6 +28,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.google.mlkit.vision.common.InputImage;
@@ -34,6 +37,11 @@ import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.TextRecognizer;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -42,8 +50,8 @@ public class AddBook extends AppCompatActivity {
     EditText title,author,ifbn,desc;
     ImageView coverimg,titleimg,authimg,ifbnimg,descimg;
     Spinner genre;
-    Button addbook, clearbtn;
-//    final int REQUEST_IMAGE_CAPTURE = 1;
+    Button addbook, addanotherbook, clearbtn;
+    final int REQUEST_IMAGE_CAPTURE = 1;
 
 
 
@@ -194,7 +202,10 @@ public class AddBook extends AppCompatActivity {
         final String imageFileName = "JPEG_" + timeStamp + "_";
         final String imagePath = "myimages/"+imageFileName+".jpg";
         final StorageReference imgRef = storageRef.child(imagePath);
+<<<<<<< HEAD
         Log.i("check1","in function");
+=======
+>>>>>>> 2be31a1fd251a4e61da9de9cacf3329daff63206
 
         imgRef.putBytes(bb).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
@@ -203,6 +214,7 @@ public class AddBook extends AppCompatActivity {
                 imgRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
+                        Uri downloadURI = uri;
 
                         String mTitle=title.getText().toString().trim();
                         String mAuthor=author.getText().toString().trim();
@@ -214,11 +226,9 @@ public class AddBook extends AppCompatActivity {
                         if(!(TextUtils.isEmpty(mTitle)) ){
                             String uid=fAuth.getUid();
                             String books="AllBooks";
-                            assert uid != null;
                             String bookID = databaseRef.child(uid).push().getKey();
-                            mImageFirebaseURI=uri.toString();
+                            mImageFirebaseURI=downloadURI.toString();
                             Book book = new Book(bookID,mTitle,mAuthor,mISBN,mDescription,mGenre,mImageFirebaseURI);
-                            assert bookID != null;
                             databaseRef.child(uid).child(books).child(bookID).setValue(book);
                             Toast.makeText(getApplicationContext(),"This Book has been added ",Toast.LENGTH_SHORT).show();
                         }else{
@@ -226,6 +236,11 @@ public class AddBook extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull @org.jetbrains.annotations.NotNull Exception e) {
+                Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
     }
