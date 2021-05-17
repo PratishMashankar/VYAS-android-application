@@ -210,7 +210,6 @@ public class AddBook extends AppCompatActivity {
                 imgRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
-                        Uri downloadURI = uri;
 
                         String mTitle=title.getText().toString().trim();
                         String mAuthor=author.getText().toString().trim();
@@ -223,7 +222,7 @@ public class AddBook extends AppCompatActivity {
                             String uid=fAuth.getUid();
                             String books="AllBooks";
                             String bookID = databaseRef.child(uid).push().getKey();
-                            mImageFirebaseURI=downloadURI.toString();
+                            mImageFirebaseURI=uri.toString();
                             Book book = new Book(bookID,mTitle,mAuthor,mISBN,mDescription,mGenre,mImageFirebaseURI);
                             databaseRef.child(uid).child(books).child(bookID).setValue(book);
                             Toast.makeText(getApplicationContext(),"This Book has been added ",Toast.LENGTH_SHORT).show();
@@ -235,7 +234,7 @@ public class AddBook extends AppCompatActivity {
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
-            public void onFailure(@NonNull @org.jetbrains.annotations.NotNull Exception e) {
+            public void onFailure(Exception e) {
                 Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });

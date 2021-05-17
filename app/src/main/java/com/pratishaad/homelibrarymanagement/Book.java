@@ -13,6 +13,8 @@ public class Book {
     String coverImageUrl;
     String imageFirebaseURI;
 
+    public Book()
+    {}
 
     public Book(String bookId, String bookTitle, String bookAuthor, String bookISBN, String bookDescription, String bookGenre, String imageFirebaseURI) {
         this.bookId = bookId;
@@ -44,17 +46,14 @@ public class Book {
         return bookDescription;
     }
 
-    public String getCoverImageURL() {
-        return coverImageUrl;
-    }
-
     public String getImageFirebaseURI () {
          return imageFirebaseURI;
     }
 
-    public FirebaseUser getFirebaseUser() {
-        return FirebaseAuth.getInstance().getCurrentUser();
+    public String getBookId() {
+        return bookId;
     }
+
 
     public void setBookId(String bookId) {
         this.bookId = bookId;

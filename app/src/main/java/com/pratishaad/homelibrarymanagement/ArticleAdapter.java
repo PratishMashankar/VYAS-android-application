@@ -15,10 +15,10 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHolder> {
-    List<ArticleList>articleLists;
+    List<Book>articleLists;
     Context ct;
 
-    public ArticleAdapter(List<ArticleList> articleLists, Context ct) {
+    public ArticleAdapter(List<Book> articleLists, Context ct) {
         this.articleLists = articleLists;
         this.ct = ct;
     }
@@ -32,12 +32,13 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ArticleList articleList=articleLists.get(position);
+//        ArticleList articleList=articleLists.get(position);
+        Book articleList=articleLists.get(position);
         Glide.with(ct)
-                .load(articleList.getImageUrl())
+                .load(articleList.getImageFirebaseURI())
                 .into(holder.articleimg);
 
-        holder.articlename.setText(articleList.getArticleName());
+        holder.articlename.setText("Title: "+articleList.getBookTitle() +"\n"+"By: "+articleList.getBookAuthor());
 
     }
 
