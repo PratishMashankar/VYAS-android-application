@@ -1,7 +1,6 @@
 package com.pratishaad.homelibrarymanagement;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +46,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
         return articleLists.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView articleimg;
         TextView articlename;
         public ViewHolder(@NonNull View itemView) {

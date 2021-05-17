@@ -202,7 +202,6 @@ public class AddBook extends AppCompatActivity {
         final String imageFileName = "JPEG_" + timeStamp + "_";
         final String imagePath = "myimages/"+imageFileName+".jpg";
         final StorageReference imgRef = storageRef.child(imagePath);
-        Log.i("check1","in function");
 
         imgRef.putBytes(bb).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override

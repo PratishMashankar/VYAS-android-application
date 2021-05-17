@@ -46,8 +46,8 @@ public class ViewBooks extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_books);
 
-        uid = book.getFirebaseUser();
-        Log.i("uid",uid.toString());
+//        uid = book.getFirebaseUser();
+//        Log.i("uid",uid.toString());
 
         rv = findViewById(R.id.rec);
         rv.setHasFixedSize(true);
