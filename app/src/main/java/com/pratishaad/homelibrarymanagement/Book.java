@@ -1,5 +1,8 @@
 package com.pratishaad.homelibrarymanagement;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class Book {
     String bookId;
     String bookTitle;
@@ -10,7 +13,6 @@ public class Book {
     String coverImageName;
     String coverImageUrl;
     String imageFirebaseURI;
-    String imageFirebaseURI2;
 
 
     public Book() {
@@ -24,13 +26,6 @@ public class Book {
         this.bookISBN = bookISBN;
         this.bookGenre = bookGenre;
         this.bookDescription = bookDescription;
-//        this.coverImageName=coverImageName;
-        this.coverImageUrl = coverImageUrl;
-    }
-
-    public Book(String coverImageName, String coverImageUrl) {
-        this.coverImageName = coverImageName;
-        this.coverImageUrl = coverImageUrl;
         this.imageFirebaseURI = imageFirebaseURI;
     }
 
@@ -58,14 +53,15 @@ public class Book {
         return bookDescription;
     }
 
-//    public String getCoverImageName() {
-//        return coverImageName;
-//    }
-
     public String getCoverImageURL() {
         return coverImageUrl;
     }
+
     public String getImageFirebaseURI () {
          return imageFirebaseURI;
+    }
+
+    public FirebaseUser getFirebaseUser() {
+        return FirebaseAuth.getInstance().getCurrentUser();
     }
 }

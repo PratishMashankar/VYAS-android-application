@@ -1,21 +1,13 @@
 package com.pratishaad.homelibrarymanagement;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
-
 import android.Manifest;
-import android.app.DirectAction;
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.TextUtils;
-import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +15,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -34,37 +29,29 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.google.mlkit.vision.common.InputImage;
-import com.google.mlkit.vision.label.ImageLabel;
-import com.google.mlkit.vision.label.ImageLabeler;
-import com.google.mlkit.vision.label.ImageLabeling;
-import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
 import com.google.mlkit.vision.text.Text;
 import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.TextRecognizer;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
-import java.util.Locale;
 
 public class AddBook extends AppCompatActivity {
 
     EditText title,author,ifbn,desc;
     ImageView coverimg,titleimg,authimg,ifbnimg,descimg;
     Spinner genre;
-    Button addbook, addanotherbook, clearbtn;
-    final int REQUEST_IMAGE_CAPTURE = 1;
-    //DatabaseReference
-    DatabaseReference databaseBooks;
-    String userID;
-    String firePathURL;
+    Button addbook, clearbtn;
+//    final int REQUEST_IMAGE_CAPTURE = 1;
+
+
 
     FirebaseAuth fAuth;
 
+    //DatabaseReference
     StorageReference storageRef;
+    DatabaseReference databaseRef;
 
     byte bb[];
 
@@ -101,12 +88,9 @@ public class AddBook extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
 
 
-
         //getting user ID under which books are to be added
-        databaseBooks= FirebaseDatabase.getInstance().getReference();
-
         storageRef = FirebaseStorage.getInstance().getReference();
-
+        databaseRef= FirebaseDatabase.getInstance().getReference();
 
 
         //check app level permission given for camera
@@ -134,8 +118,7 @@ public class AddBook extends AppCompatActivity {
         addbook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addBook();
-                //uid of book, add im,age to this uid
+                uploadBookToFirebase(bb);
             }
         });
     }
@@ -156,6 +139,7 @@ public class AddBook extends AppCompatActivity {
         Bundle bundle = data.getExtras();
         //extract image from bundle
         Bitmap bitmap = (Bitmap) bundle.get("data");
+
         //set image to image view
         if(requestCode==105) {
 
@@ -166,7 +150,9 @@ public class AddBook extends AppCompatActivity {
         else if(requestCode==102) authimg.setImageBitmap(bitmap);
         else if(requestCode==103) ifbnimg.setImageBitmap(bitmap);
         else if(requestCode==104) descimg.setImageBitmap(bitmap);
-        //process the image to extract image
+
+
+        //process the image to extract text
         InputImage image = InputImage.fromBitmap(bitmap, 0);
         TextRecognizer recognizer = TextRecognition.getClient();
         Task<Text> result =
@@ -192,6 +178,8 @@ public class AddBook extends AppCompatActivity {
                                 });
     }
 
+
+    //Convert captured title image to bit map
     private void onCaptureImageResult(Intent data) {
         Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
@@ -199,45 +187,46 @@ public class AddBook extends AppCompatActivity {
         bb = bytes.toByteArray();
     }
 
-    private String uploadImageToFirebase(byte[] bb) {
+
+    //upload book to firebase
+    protected void uploadBookToFirebase(byte[] bb) {
         final String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         final String imageFileName = "JPEG_" + timeStamp + "_";
         final String imagePath = "myimages/"+imageFileName+".jpg";
         final StorageReference imgRef = storageRef.child(imagePath);
-        final String[] imguri = new String[1];
+        Log.i("check1","in function");
 
         imgRef.putBytes(bb).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                //imguri[0] ="gs://homelibrarymanagement.appspot.com/myimages/"+imageFileName+".jpg";
+                //Toast.makeText(getApplicationContext(),"Upload successful",Toast.LENGTH_SHORT).show();
+                imgRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+
+                        String mTitle=title.getText().toString().trim();
+                        String mAuthor=author.getText().toString().trim();
+                        String mISBN=ifbn.getText().toString().trim();
+                        String mDescription=desc.getText().toString().trim();
+                        String mGenre=genre.getSelectedItem().toString();
+                        String mImageFirebaseURI="";
+
+                        if(!(TextUtils.isEmpty(mTitle)) ){
+                            String uid=fAuth.getUid();
+                            String books="AllBooks";
+                            assert uid != null;
+                            String bookID = databaseRef.child(uid).push().getKey();
+                            mImageFirebaseURI=uri.toString();
+                            Book book = new Book(bookID,mTitle,mAuthor,mISBN,mDescription,mGenre,mImageFirebaseURI);
+                            assert bookID != null;
+                            databaseRef.child(uid).child(books).child(bookID).setValue(book);
+                            Toast.makeText(getApplicationContext(),"This Book has been added ",Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(getApplicationContext(),"Book Failed to ADD",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
-
-
-        imguri[0] ="gs://homelibrarymanagement.appspot.com/myimages/"+imageFileName+".jpg";
-        return  imguri[0];
-
-    }
-
-    //ADD BOOK TO FIREBASE
-    protected void addBook(){
-        String mTitle=title.getText().toString().trim();
-        String mAuthor=author.getText().toString().trim();
-        String mISBN=ifbn.getText().toString().trim();
-        String mDescription=desc.getText().toString().trim();
-        String mGenre=genre.getSelectedItem().toString();
-        String mImageFirebaseURI="";
-
-        if(!(TextUtils.isEmpty(mTitle)) ){
-            mImageFirebaseURI=uploadImageToFirebase(bb);
-            String uid=fAuth.getUid();
-            String books="AllBooks";
-            String bookID = databaseBooks.child(uid).push().getKey();
-            Book book = new Book(bookID,mTitle,mAuthor,mISBN,mDescription,mGenre,mImageFirebaseURI);
-            databaseBooks.child(uid).child(books).child(bookID).setValue(book);
-            Toast.makeText(getApplicationContext(),"This Book has been added ",Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(getApplicationContext(),"Book Failed to ADD",Toast.LENGTH_SHORT).show();
-        }
     }
 }
