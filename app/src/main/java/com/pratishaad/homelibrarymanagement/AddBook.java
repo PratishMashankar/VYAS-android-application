@@ -22,6 +22,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -61,6 +63,8 @@ public class AddBook extends AppCompatActivity {
     ImageView coverimg,titleimg,authimg,ifbnimg,descimg;
     Spinner genre;
     Button addbook, addanotherbook, clearbtn;
+    RadioButton radioButton;
+    RadioGroup radioGroup;
     final int REQUEST_IMAGE_CAPTURE = 1;
 
 
@@ -92,6 +96,8 @@ public class AddBook extends AppCompatActivity {
         descimg=(ImageView)findViewById(R.id.descimg);
 
         genre=(Spinner)findViewById(R.id.genre);
+
+        radioGroup=(RadioGroup)findViewById(R.id.radio_group_currentlyReading);
 
         addbook=(Button)findViewById(R.id.addbook);
         clearbtn=(Button)findViewById(R.id.clear);
@@ -228,13 +234,25 @@ public class AddBook extends AppCompatActivity {
                         String mDescription=desc.getText().toString().trim();
                         String mGenre=genre.getSelectedItem().toString();
                         String mImageFirebaseURI="";
+                        String mCurrentlyReading="";
+
+                        int selectedId = radioGroup.getCheckedRadioButtonId();
+                        radioButton = (RadioButton) findViewById(selectedId);
+                        mCurrentlyReading=radioButton.getText().toString();
+                        if(mCurrentlyReading.equals(null)) mCurrentlyReading="No";
+
+                        String mlendBookBool="This book has not been lent";
+                        String mLendLendeeName="N/A";
+                        String mLendGiveDate="N/A";
+                        String mLendReceiveDate="N/A";
+
 
                         if(!(TextUtils.isEmpty(mTitle)) ){
                             String uid=fAuth.getUid();
                             String books="AllBooks";
                             String bookID = databaseRef.child(uid).push().getKey();
                             mImageFirebaseURI=downloadURI.toString();
-                            Book book = new Book(bookID,mTitle,mAuthor,mISBN,mDescription,mGenre,mImageFirebaseURI);
+                            Book book = new Book(bookID,mTitle,mAuthor,mISBN,mDescription,mGenre,mImageFirebaseURI,mCurrentlyReading,mlendBookBool,mLendLendeeName,mLendGiveDate,mLendReceiveDate);
                             databaseRef.child(uid).child(books).child(bookID).setValue(book);
                             Toast.makeText(getApplicationContext(),"This Book has been added ",Toast.LENGTH_SHORT).show();
                         }else{

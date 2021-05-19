@@ -1428,6 +1428,22 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\values-v28_values-v28.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\psmas\\.gradle\\caches\\transforms-2\\files-2.1\\e7700bf3fcf4236768ca476b82b72080\\appcompat-1.2.0\\res\\values-v28\\values-v28.xml",
+                    "from": {
+                        "startLines": "2,3,4,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,447",
+                        "endLines": "2,3,7,11",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,442,684"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\values-is_values-is.arsc.flat",
             "map": [
                 {
@@ -1496,22 +1512,6 @@
                         "startOffsets": "105,205,302,414,499,600,714,795,874,965,1058,1151,1245,1351,1444,1539,1634,1725,1819,1900,2010,2117,2214,2323,2423,2526,2681,5416",
                         "endColumns": "99,96,111,84,100,113,80,78,90,92,92,93,105,92,94,94,90,93,80,109,106,96,108,99,102,154,97,80",
                         "endOffsets": "200,297,409,494,595,709,790,869,960,1053,1146,1240,1346,1439,1534,1629,1720,1814,1895,2005,2112,2209,2318,2418,2521,2676,2774,5492"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\values-v28_values-v28.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\psmas\\.gradle\\caches\\transforms-2\\files-2.1\\e7700bf3fcf4236768ca476b82b72080\\appcompat-1.2.0\\res\\values-v28\\values-v28.xml",
-                    "from": {
-                        "startLines": "2,3,4,8",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,447",
-                        "endLines": "2,3,7,11",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,442,684"
                     }
                 }
             ]
@@ -1914,40 +1914,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\values-v16_values-v16.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\psmas\\.gradle\\caches\\transforms-2\\files-2.1\\e7700bf3fcf4236768ca476b82b72080\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "223"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "121",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\psmas\\.gradle\\caches\\transforms-2\\files-2.1\\0fd693cbeda8be952cfd72e782f62993\\core-1.3.1\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\values-sr_values-sr.arsc.flat",
             "map": [
                 {
@@ -2016,6 +1982,40 @@
                         "startOffsets": "105,212,313,419,505,609,731,815,896,987,1080,1175,1269,1369,1462,1557,1662,1753,1844,1930,2035,2141,2244,2350,2459,2566,2736,5492",
                         "endColumns": "106,100,105,85,103,121,83,80,90,92,94,93,99,92,94,104,90,90,85,104,105,102,105,108,106,169,96,86",
                         "endOffsets": "207,308,414,500,604,726,810,891,982,1075,1170,1264,1364,1457,1552,1657,1748,1839,1925,2030,2136,2239,2345,2454,2561,2731,2828,5574"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\values-v16_values-v16.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\psmas\\.gradle\\caches\\transforms-2\\files-2.1\\e7700bf3fcf4236768ca476b82b72080\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\psmas\\.gradle\\caches\\transforms-2\\files-2.1\\0fd693cbeda8be952cfd72e782f62993\\core-1.3.1\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]
@@ -2417,6 +2417,21 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\values-v24_values-v24.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\psmas\\.gradle\\caches\\transforms-2\\files-2.1\\e7700bf3fcf4236768ca476b82b72080\\appcompat-1.2.0\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\values-as_values-as.arsc.flat",
             "map": [
                 {
@@ -2485,21 +2500,6 @@
                         "startOffsets": "105,213,312,419,510,612,732,809,884,975,1068,1163,1257,1357,1450,1545,1639,1730,1821,1907,2020,2128,2227,2336,2452,2572,2739,5455",
                         "endColumns": "107,98,106,90,101,119,76,74,90,92,94,93,99,92,94,93,90,90,85,112,107,98,108,115,119,166,101,82",
                         "endOffsets": "208,307,414,505,607,727,804,879,970,1063,1158,1252,1352,1445,1540,1634,1725,1816,1902,2015,2123,2222,2331,2447,2567,2734,2836,5533"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\values-v24_values-v24.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\psmas\\.gradle\\caches\\transforms-2\\files-2.1\\e7700bf3fcf4236768ca476b82b72080\\appcompat-1.2.0\\res\\values-v24\\values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
                     }
                 }
             ]
