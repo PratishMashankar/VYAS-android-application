@@ -1,20 +1,21 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:38:9-46:20
+INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:40:9-48:20
 	android:grantUriPermissions
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:42:13-47
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:44:13-47
 	android:authorities
 		INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:40:13-60
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:42:13-60
 	android:exported
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:41:13-37
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:39:13-62
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:41:13-62
 manifest
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-62:12
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-59:12
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\cbf08dde3da20d56d9ed7b206137cd9a\material-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\006b46906b2f770011761845d9282045\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e7700bf3fcf4236768ca476b82b72080\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\805d61b750045d07d6274e241761f908\jetified-firebase-auth-20.0.3\AndroidManifest.xml:17:1-83:12
@@ -23,6 +24,7 @@ MERGED from [com.google.mlkit:image-labeling:17.0.2] C:\Users\psmas\.gradle\cach
 MERGED from [com.google.firebase:firebase-analytics:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\d37c32e77beb89fdf8a32f1027074642\jetified-firebase-analytics-18.0.2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\24ac034c76dfb1b3647cba84ddb1672b\jetified-firebase-database-19.7.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\64e3c4dba3cd11f683f332ffc6b40ca0\jetified-firebase-storage-19.2.1\AndroidManifest.xml:15:1-39:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\ba2f6d14ee261b58d0d59648fdd982bb\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\222e134cba2d349f1e4065f697f9cee3\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\6f8a1c65b62d3d41d59ae57c34d2003d\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\25fbcde65f6b468fffaa0f62d18255b4\jetified-glide-4.7.1\AndroidManifest.xml:2:1-13:12
@@ -58,13 +60,16 @@ MERGED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\psma
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\10200895828a97f345b2c6d8b62c92e0\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\7f4c42c1c3c6ebd681e475a59f065589\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\98e4eac5dbabdc03dc9a3208d4ac5a12\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\7298b494b9a7f8fb03baaa6f856a206c\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\58eb7d79e1e64a19fff6d1a1c648b27f\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\250ab090dfc5bec91fd73a0507b9ad4f\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e17bdec46d5ed3de9528472d4402ade8\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\cebdbf0203f70fcdd27366005c819665\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\d344556663e01f06659c4b7ee7cd264e\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\8c87e949e9f9d3cdf435adfefa7cc286\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\a08a61d091975000a4dce67a59e2d28a\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\a1ba948683f1cc3fb6b9651269eda2cf\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\f47ed8effeee6c20e76fded34a1f3fde\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e17bdec46d5ed3de9528472d4402ade8\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\cebdbf0203f70fcdd27366005c819665\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.3.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\0fd693cbeda8be952cfd72e782f62993\core-1.3.1\AndroidManifest.xml:17:1-26:12
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e672c7f8000ae2622a73a6cfb52c459d\jetified-transport-runtime-2.2.5\AndroidManifest.xml:15:1-41:12
 MERGED from [com.google.android.datatransport:transport-api:2.2.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\c431f940b25027e99e1e0be93cf9e534\jetified-transport-api-2.2.1\AndroidManifest.xml:15:1-22:12
@@ -82,25 +87,28 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\psmas\.gradle\caches\transform
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\6cbcfb2ce82b6124d3e0157ed6461498\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\f7e4217367496a423c08b58cd7a649f8\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\a16ef9f377ada6515a2739603d983dff\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-62:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\8275c6f89d23e4cfe8d5dd5efa714638\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-59:12
 	package
 		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:3:5-51
 		INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-59:12
 		INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:1-59:12
 		INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:5:5-48:19
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:5:5-49:19
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\cbf08dde3da20d56d9ed7b206137cd9a\material-1.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\cbf08dde3da20d56d9ed7b206137cd9a\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\006b46906b2f770011761845d9282045\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\006b46906b2f770011761845d9282045\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\805d61b750045d07d6274e241761f908\jetified-firebase-auth-20.0.3\AndroidManifest.xml:26:5-81:19
@@ -181,106 +189,116 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\ps
 		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.pratishaad.homelibrarymanagement.LendBookDetails
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:12:9-62
+	android:name
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:12:19-50
+activity#com.pratishaad.homelibrarymanagement.ViewBookDetails
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:13:9-53
+	android:name
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:13:19-50
 activity#com.pratishaad.homelibrarymanagement.BibliophileCompanion
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:12:9-67
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:14:9-58
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:12:19-55
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:14:19-55
 activity#com.pratishaad.homelibrarymanagement.ViewLentBooks
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:13:9-51
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:15:9-51
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:13:19-48
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:15:19-48
 activity#com.pratishaad.homelibrarymanagement.LendBook
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:14:9-46
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:16:9-46
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:14:19-43
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:16:19-43
 activity#com.pratishaad.homelibrarymanagement.ViewBooks
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:15:9-47
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:17:9-47
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:15:19-44
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:17:19-44
 activity#com.pratishaad.homelibrarymanagement.AddBook
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:16:9-45
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:18:9-45
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:16:19-42
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:18:19-42
 activity#com.pratishaad.homelibrarymanagement.MainActivity
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:17:9-50
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:19:9-50
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:17:19-47
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:19:19-47
 activity#com.pratishaad.homelibrarymanagement.Login
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:19:9-43
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:21:9-43
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:19:19-40
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:21:19-40
 activity#com.pratishaad.homelibrarymanagement.Register
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:20:9-26:20
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:22:9-28:20
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:20:19-43
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:22:19-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:26:27-74
 meta-data#com.google.firebase.ml.vision.DEPENDENCIES
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:28:9-30:35
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:30:9-32:35
 	android:value
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:30:13-32
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:32:13-32
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:29:13-70
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:31:13-70
 meta-data#com.google.mlkit.vision.DEPENDENCIES
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:31:9-33:35
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:33:9-35:35
 	android:value
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:33:13-32
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:35:13-32
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:32:13-64
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:34:13-64
 meta-data#preloaded_fonts
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:34:9-36:57
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:36:9-38:57
 	android:resource
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:36:13-54
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:38:13-54
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:35:13-43
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:37:13-43
 uses-feature#android.hardware.camera
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:50:5-52:35
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:51:5-53:35
 	android:required
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:52:9-32
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:53:9-32
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:51:9-47
-uses-permission#android.permission.CAMERA
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:53:5-65
-	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:53:22-62
-uses-permission#android.permission.INTERNET
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:55:5-67
-MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\805d61b750045d07d6274e241761f908\jetified-firebase-auth-20.0.3\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\805d61b750045d07d6274e241761f908\jetified-firebase-auth-20.0.3\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\24ac034c76dfb1b3647cba84ddb1672b\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\24ac034c76dfb1b3647cba84ddb1672b\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\64e3c4dba3cd11f683f332ffc6b40ca0\jetified-firebase-storage-19.2.1\AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\64e3c4dba3cd11f683f332ffc6b40ca0\jetified-firebase-storage-19.2.1\AndroidManifest.xml:27:5-67
-MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\29ffe6018e2265903ab62c73f3187518\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:26:5-67
-MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\29ffe6018e2265903ab62c73f3187518\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:26:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\4ffa197dfdf4bdbf00a84b3aeb275a0f\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\4ffa197dfdf4bdbf00a84b3aeb275a0f\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-installations:16.3.5] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e7656dc500e26d5985fed9d364afdc23\jetified-firebase-installations-16.3.5\AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-installations:16.3.5] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e7656dc500e26d5985fed9d364afdc23\jetified-firebase-installations-16.3.5\AndroidManifest.xml:11:5-67
-MERGED from [com.google.android.gms:play-services-measurement:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\67e0b97d3ac1c33acaaf232548a0f25b\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\67e0b97d3ac1c33acaaf232548a0f25b\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\6685b80d3ed147f07f3d6f110a28e376\jetified-play-services-measurement-impl-18.0.2\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\6685b80d3ed147f07f3d6f110a28e376\jetified-play-services-measurement-impl-18.0.2\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\c0b9c77d87b70d0b9cd24269aa5a059b\jetified-play-services-measurement-sdk-api-18.0.2\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\c0b9c77d87b70d0b9cd24269aa5a059b\jetified-play-services-measurement-sdk-api-18.0.2\AndroidManifest.xml:23:5-67
-	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:55:22-64
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:52:9-47
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:57:5-58:68
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:54:5-81
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:58:9-65
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:54:22-78
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:55:5-65
+	android:name
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:55:22-62
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:57:5-67
+MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\805d61b750045d07d6274e241761f908\jetified-firebase-auth-20.0.3\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\805d61b750045d07d6274e241761f908\jetified-firebase-auth-20.0.3\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\24ac034c76dfb1b3647cba84ddb1672b\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\24ac034c76dfb1b3647cba84ddb1672b\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\64e3c4dba3cd11f683f332ffc6b40ca0\jetified-firebase-storage-19.2.1\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\64e3c4dba3cd11f683f332ffc6b40ca0\jetified-firebase-storage-19.2.1\AndroidManifest.xml:27:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\29ffe6018e2265903ab62c73f3187518\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\29ffe6018e2265903ab62c73f3187518\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\4ffa197dfdf4bdbf00a84b3aeb275a0f\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\4ffa197dfdf4bdbf00a84b3aeb275a0f\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-installations:16.3.5] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e7656dc500e26d5985fed9d364afdc23\jetified-firebase-installations-16.3.5\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-installations:16.3.5] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e7656dc500e26d5985fed9d364afdc23\jetified-firebase-installations-16.3.5\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-measurement:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\67e0b97d3ac1c33acaaf232548a0f25b\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\67e0b97d3ac1c33acaaf232548a0f25b\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\6685b80d3ed147f07f3d6f110a28e376\jetified-play-services-measurement-impl-18.0.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\6685b80d3ed147f07f3d6f110a28e376\jetified-play-services-measurement-impl-18.0.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\c0b9c77d87b70d0b9cd24269aa5a059b\jetified-play-services-measurement-sdk-api-18.0.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.2] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\c0b9c77d87b70d0b9cd24269aa5a059b\jetified-play-services-measurement-sdk-api-18.0.2\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:57:22-64
 uses-sdk
 INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\cbf08dde3da20d56d9ed7b206137cd9a\material-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\cbf08dde3da20d56d9ed7b206137cd9a\material-1.3.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\006b46906b2f770011761845d9282045\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\006b46906b2f770011761845d9282045\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e7700bf3fcf4236768ca476b82b72080\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
@@ -297,6 +315,8 @@ MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\psmas\.gradl
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\24ac034c76dfb1b3647cba84ddb1672b\jetified-firebase-database-19.7.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\64e3c4dba3cd11f683f332ffc6b40ca0\jetified-firebase-storage-19.2.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\64e3c4dba3cd11f683f332ffc6b40ca0\jetified-firebase-storage-19.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\ba2f6d14ee261b58d0d59648fdd982bb\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\ba2f6d14ee261b58d0d59648fdd982bb\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\222e134cba2d349f1e4065f697f9cee3\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\222e134cba2d349f1e4065f697f9cee3\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\6f8a1c65b62d3d41d59ae57c34d2003d\cardview-1.0.0\AndroidManifest.xml:20:5-44
@@ -367,6 +387,16 @@ MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\psmas\.gradl
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\7f4c42c1c3c6ebd681e475a59f065589\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\98e4eac5dbabdc03dc9a3208d4ac5a12\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\98e4eac5dbabdc03dc9a3208d4ac5a12\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\7298b494b9a7f8fb03baaa6f856a206c\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\7298b494b9a7f8fb03baaa6f856a206c\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\58eb7d79e1e64a19fff6d1a1c648b27f\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\58eb7d79e1e64a19fff6d1a1c648b27f\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\250ab090dfc5bec91fd73a0507b9ad4f\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\250ab090dfc5bec91fd73a0507b9ad4f\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e17bdec46d5ed3de9528472d4402ade8\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e17bdec46d5ed3de9528472d4402ade8\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\cebdbf0203f70fcdd27366005c819665\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\cebdbf0203f70fcdd27366005c819665\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\d344556663e01f06659c4b7ee7cd264e\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\d344556663e01f06659c4b7ee7cd264e\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\8c87e949e9f9d3cdf435adfefa7cc286\customview-1.0.0\AndroidManifest.xml:20:5-44
@@ -377,10 +407,6 @@ MERGED from [androidx.loader:loader:1.0.0] C:\Users\psmas\.gradle\caches\transfo
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\a1ba948683f1cc3fb6b9651269eda2cf\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\f47ed8effeee6c20e76fded34a1f3fde\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\f47ed8effeee6c20e76fded34a1f3fde\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e17bdec46d5ed3de9528472d4402ade8\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e17bdec46d5ed3de9528472d4402ade8\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\cebdbf0203f70fcdd27366005c819665\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\cebdbf0203f70fcdd27366005c819665\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.3.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\0fd693cbeda8be952cfd72e782f62993\core-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.3.1] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\0fd693cbeda8be952cfd72e782f62993\core-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\e672c7f8000ae2622a73a6cfb52c459d\jetified-transport-runtime-2.2.5\AndroidManifest.xml:18:5-20:41
@@ -415,6 +441,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\psmas\.g
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\f7e4217367496a423c08b58cd7a649f8\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\a16ef9f377ada6515a2739603d983dff\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\a16ef9f377ada6515a2739603d983dff\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\8275c6f89d23e4cfe8d5dd5efa714638\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\8275c6f89d23e4cfe8d5dd5efa714638\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -426,11 +454,11 @@ INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main
 		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:43:13-45:58
+ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:45:13-47:58
 	android:resource
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:45:17-55
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:47:17-55
 	android:name
-		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:44:17-67
+		ADDED from C:\Users\psmas\OneDrive\Desktop\HomeLibraryManagement\app\src\main\AndroidManifest.xml:46:17-67
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\805d61b750045d07d6274e241761f908\jetified-firebase-auth-20.0.3\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\psmas\.gradle\caches\transforms-2\files-2.1\24ac034c76dfb1b3647cba84ddb1672b\jetified-firebase-database-19.7.0\AndroidManifest.xml:25:5-79

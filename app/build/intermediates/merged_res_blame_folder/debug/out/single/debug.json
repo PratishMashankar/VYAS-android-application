@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
-        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\xml\\provider_paths.xml"
+        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_article_list.xml.flat",
+        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\article_list.xml"
     },
     {
         "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_bibliophile_companion.xml.flat",
         "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\activity_bibliophile_companion.xml"
     },
     {
-        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_article_list.xml.flat",
-        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\article_list.xml"
+        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
+        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\xml\\provider_paths.xml"
     },
     {
         "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -72,24 +72,24 @@
         "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\activity_lend_book.xml"
     },
     {
-        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
-    },
-    {
         "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_view_books.xml.flat",
         "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\activity_view_books.xml"
+    },
+    {
+        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_view_lent_books.xml.flat",
-        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\activity_view_lent_books.xml"
-    },
-    {
         "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_view_lent_books.xml.flat",
+        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\activity_view_lent_books.xml"
     },
     {
         "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
@@ -102,6 +102,14 @@
     {
         "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_view_book_details.xml.flat",
+        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\activity_view_book_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_lend_book_details.xml.flat",
+        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\activity_lend_book_details.xml"
     },
     {
         "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
