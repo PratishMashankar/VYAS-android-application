@@ -1853,6 +1853,7 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id collapseActionView
+id confirmButtonLend
 id confirm_button
 id container
 id content
@@ -1968,11 +1969,17 @@ id largeLabel
 id layout
 id left
 id leftToRight
+id lendAuthorName
 id lendBook
+id lendBookName
+id lendGiveDate
+id lendImageView
+id lendReceiveDate
 id lend_book_details
 id lend_book_image
 id lend_book_name
 id lendbooks
+id lendeeName
 id light
 id line1
 id line3
@@ -2074,6 +2081,7 @@ id radio_group_currentlyReading
 id ratio
 id rec
 id recLent
+id receiveBook
 id rectangles
 id reenterpassword
 id registerbtn
@@ -2145,6 +2153,7 @@ id tabMode
 id tableLayout
 id tableLayout2
 id tableLayout3
+id tableLayout4
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -2161,6 +2170,8 @@ id text
 id text1
 id text2
 id textEnd
+id textGiveDate
+id textReceiveDate
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart

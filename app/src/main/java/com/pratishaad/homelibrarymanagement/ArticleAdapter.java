@@ -51,11 +51,10 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
         holder.articlelent.setText(articleList.getLendBookBool());
         String a= (String) holder.articlelent.getText();
         try {
-            if (a.equals("This book has not been lent") || a.isEmpty()){
+            if (a.equals("No") || a.isEmpty()){
                 holder.articlelent.setText("");
             }
             else {
-
                 holder.articlelent.setText("Book lent to "+articleList.getLendLendeeName());
                 holder.articlelent.setBackgroundColor(Color.RED);
                 holder.articlelent.setTextColor(Color.WHITE);

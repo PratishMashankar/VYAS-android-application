@@ -70,6 +70,7 @@ public class ViewBooks extends AppCompatActivity {
                         intent.putExtra("Lendee", articleLists.get(position).getLendLendeeName());
                         intent.putExtra("GiveDate", articleLists.get(position).getLendGiveDate());
                         intent.putExtra("ReceiveDate", articleLists.get(position).getLendReceiveDate());
+                        intent.putExtra("BookID",articleLists.get(position).getBookId());
 
                         startActivity(intent);
                     }

@@ -8,14 +8,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ViewBookDetails extends AppCompatActivity {
 
-    Button lendBook;
+    Button lendBook, receiveBook;
     ImageView mCoverImage;
     TextView bookTitle, bookAuthor,bookISBN,bookGenre,bookDescription,currentlyReadingBool,lendBookBool,lendLendeeName,lendGiveDate, lendReceiveDate;
+    FirebaseAuth fAuth;
+    DatabaseReference databaseRef;
 
 
     @Override
@@ -37,8 +43,11 @@ public class ViewBookDetails extends AppCompatActivity {
         lendReceiveDate = (TextView)findViewById(R.id.book_lendReceiveDate);
 
         lendBook=(Button)findViewById(R.id.lendBook);
+        receiveBook=(Button)findViewById(R.id.receiveBook);
 
-        Bundle extras = getIntent().getExtras();
+
+
+        final Bundle extras = getIntent().getExtras();
         if(extras!=null){
 
             Glide.with(getApplicationContext()).load(extras.getString("Image")).into(mCoverImage);
@@ -59,9 +68,36 @@ public class ViewBookDetails extends AppCompatActivity {
         lendBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),LendBookDetails.class);
-                startActivity(intent);
+                if (!lendBookBool.getText().equals("Yes")) {
+                    Intent intent = new Intent(getApplicationContext(), LendBookDetails.class);
+                    intent.putExtra("ImageLend", extras.getString("Image"));
+                    intent.putExtra("TitleLend", extras.getString("Title"));
+                    intent.putExtra("AuthorLend", extras.getString("Author"));
+                    intent.putExtra("LendBookID", extras.getString("BookID"));
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Book has already been lent to "+extras.getString("Lendee"), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
+        fAuth = FirebaseAuth.getInstance();
+        databaseRef= FirebaseDatabase.getInstance().getReference().child(fAuth.getUid()).child("AllBooks").child(extras.getString("BookID"));
+        receiveBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Book received from: "+extras.getString("Lendee"), Toast.LENGTH_SHORT).show();
+                databaseRef.child("lendBookBool").setValue("No");
+                databaseRef.child("lendGiveDate").setValue("N/A");
+                databaseRef.child("lendReceiveDate").setValue("N/A");
+                databaseRef.child("lendLendeeName").setValue("N/A");
+                lendBookBool.setText("No");
+                lendGiveDate.setText("N/A");
+                lendLendeeName.setText("N/A");
+                lendReceiveDate.setText("N/A");
+                Intent intent= new Intent(getApplicationContext(),ViewBooks.class);
+                startActivity(intent);
             }
         });
     }

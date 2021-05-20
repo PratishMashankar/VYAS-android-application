@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_article_list.xml.flat",
-        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\article_list.xml"
+        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
+        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\xml\\provider_paths.xml"
     },
     {
         "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_bibliophile_companion.xml.flat",
         "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\activity_bibliophile_companion.xml"
     },
     {
-        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
-        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\xml\\provider_paths.xml"
+        "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_article_list.xml.flat",
+        "source": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\src\\main\\res\\layout\\article_list.xml"
     },
     {
         "merged": "C:\\Users\\psmas\\OneDrive\\Desktop\\HomeLibraryManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
