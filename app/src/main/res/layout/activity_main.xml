@@ -62,7 +62,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/lendbook"
+                android:id="@+id/lendbooks"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:text="Lend Book" />
