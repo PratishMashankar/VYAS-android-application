@@ -39,10 +39,11 @@ public class LendBookAdapter extends RecyclerView.Adapter<LendBookAdapter.ViewHo
         Book bookLentList=bookLentLists.get(position);
 
 
+
         holder.articlelent.setText(bookLentList.getLendBookBool());
         String a= (String) holder.articlelent.getText();
         try {
-            if (a.equals("This book has not been lent") || a.isEmpty()){
+            if (a.equals("No") || a.isEmpty()){
                 holder.ll.setLayoutParams(holder.params);
             }
             else {
@@ -56,8 +57,6 @@ public class LendBookAdapter extends RecyclerView.Adapter<LendBookAdapter.ViewHo
                         "\nGenre: "+bookLentList.getBookGenre()+
                         "\nISBN: "+bookLentList.getBookISBN());
                 holder.articlelent.setTextSize(14);
-
-
                 holder.articlelent.setText("Book lent to "+bookLentList.getLendLendeeName());
                 holder.articlelent.setBackgroundColor(Color.RED);
                 holder.articlelent.setTextColor(Color.WHITE);

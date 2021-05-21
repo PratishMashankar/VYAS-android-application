@@ -64,8 +64,6 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
         catch (Exception e){
             Toast.makeText(ct.getApplicationContext(), e.toString(),Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     @Override

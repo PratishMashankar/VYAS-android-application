@@ -56,6 +56,7 @@ public class ViewLentBooks extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot di : dataSnapshot.getChildren()) {
                     Book bookLentList = di.getValue(Book.class);
+                    //if(!bookLentList.getLendBookBool().equals("No"))
                     bookLentLists.add(bookLentList);
                 }
                 LendBookAdapter adapter = new LendBookAdapter(bookLentLists, getApplicationContext());

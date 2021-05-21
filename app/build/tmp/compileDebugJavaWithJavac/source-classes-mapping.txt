@@ -28,11 +28,13 @@ com/pratishaad/homelibrarymanagement/BibliophileCompanion.java
  com.pratishaad.homelibrarymanagement.BibliophileCompanion$4
 com/pratishaad/homelibrarymanagement/LendBook.java
  com.pratishaad.homelibrarymanagement.LendBook
-com/pratishaad/homelibrarymanagement/RegisterClassDB.java
- com.pratishaad.homelibrarymanagement.RegisterClassDB
-com/pratishaad/homelibrarymanagement/ViewLentBooks.java
- com.pratishaad.homelibrarymanagement.ViewLentBooks
- com.pratishaad.homelibrarymanagement.ViewLentBooks$1
+com/pratishaad/homelibrarymanagement/ViewBooks.java
+ com.pratishaad.homelibrarymanagement.ViewBooks
+ com.pratishaad.homelibrarymanagement.ViewBooks$1
+ com.pratishaad.homelibrarymanagement.ViewBooks$1$1
+com/pratishaad/homelibrarymanagement/LendBookDetails.java
+ com.pratishaad.homelibrarymanagement.LendBookDetails
+ com.pratishaad.homelibrarymanagement.LendBookDetails$1
 com/pratishaad/homelibrarymanagement/AddBook.java
  com.pratishaad.homelibrarymanagement.AddBook
  com.pratishaad.homelibrarymanagement.AddBook$1
@@ -49,14 +51,12 @@ com/pratishaad/homelibrarymanagement/Register.java
  com.pratishaad.homelibrarymanagement.Register$1
  com.pratishaad.homelibrarymanagement.Register$1$1
  com.pratishaad.homelibrarymanagement.Register$2
-com/pratishaad/homelibrarymanagement/ViewBooks.java
- com.pratishaad.homelibrarymanagement.ViewBooks
- com.pratishaad.homelibrarymanagement.ViewBooks$1
- com.pratishaad.homelibrarymanagement.ViewBooks$1$1
-com/pratishaad/homelibrarymanagement/LendBookDetails.java
- com.pratishaad.homelibrarymanagement.LendBookDetails
- com.pratishaad.homelibrarymanagement.LendBookDetails$1
 com/pratishaad/homelibrarymanagement/ViewBookDetails.java
  com.pratishaad.homelibrarymanagement.ViewBookDetails
  com.pratishaad.homelibrarymanagement.ViewBookDetails$1
  com.pratishaad.homelibrarymanagement.ViewBookDetails$2
+com/pratishaad/homelibrarymanagement/ViewLentBooks.java
+ com.pratishaad.homelibrarymanagement.ViewLentBooks
+ com.pratishaad.homelibrarymanagement.ViewLentBooks$1
+com/pratishaad/homelibrarymanagement/RegisterClassDB.java
+ com.pratishaad.homelibrarymanagement.RegisterClassDB
