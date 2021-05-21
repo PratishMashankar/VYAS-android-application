@@ -30,6 +30,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.pratishaad.homelibrarymanagement.BookRecommendation" />
+        <activity android:name="com.pratishaad.homelibrarymanagement.LendBookDetails" />
+        <activity android:name="com.pratishaad.homelibrarymanagement.ViewBookDetails" />
         <activity android:name="com.pratishaad.homelibrarymanagement.BibliophileCompanion" />
         <activity android:name="com.pratishaad.homelibrarymanagement.ViewLentBooks" />
         <activity android:name="com.pratishaad.homelibrarymanagement.LendBook" />

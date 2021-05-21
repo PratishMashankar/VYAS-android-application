@@ -68,6 +68,10 @@
         "source": "/Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/res/layout/activity_login.xml"
     },
     {
+        "merged": "/Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/build/intermediates/res/merged/debug/layout_activity_book_recommendation.xml.flat",
+        "source": "/Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/res/layout/activity_book_recommendation.xml"
+    },
+    {
         "merged": "/Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
         "source": "/Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },

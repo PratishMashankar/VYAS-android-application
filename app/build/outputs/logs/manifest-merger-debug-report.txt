@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:38:9-46:20
+INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:41:9-49:20
 	android:grantUriPermissions
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:42:13-47
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:45:13-47
 	android:authorities
 		INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:40:13-60
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:43:13-60
 	android:exported
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:41:13-37
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:44:13-37
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:39:13-62
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:42:13-62
 manifest
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-62:12
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-60:12
 MERGED from [com.google.android.material:material:1.3.0] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/f02bb9d517082bf92d89d4806eb5fbd4/material-1.3.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/875cfd60e20d254badcfba23ad749bdd/constraintlayout-2.0.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/0365516b2f0a38fd96a530e99ca676ab/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
@@ -88,25 +88,25 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/vasishtasreevar
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/010acb29560c493fb80245f823380fc7/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/7a6883978f5f11eaed7d044d1bfc2eda/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/080e3063984ca8ec70c46ef46956536b/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-60:12
 	package
 		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:3:5-51
 		INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-62:12
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-60:12
 		INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-62:12
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:1-60:12
 		INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:5:5-48:19
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:5:5-50:19
 MERGED from [com.google.android.material:material:1.3.0] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/f02bb9d517082bf92d89d4806eb5fbd4/material-1.3.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/f02bb9d517082bf92d89d4806eb5fbd4/material-1.3.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/875cfd60e20d254badcfba23ad749bdd/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
@@ -189,78 +189,90 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/vasi
 		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.pratishaad.homelibrarymanagement.BookRecommendation
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:12:9-65
+	android:name
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:12:19-53
+activity#com.pratishaad.homelibrarymanagement.LendBookDetails
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:13:9-53
+	android:name
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:13:19-50
+activity#com.pratishaad.homelibrarymanagement.ViewBookDetails
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:14:9-53
+	android:name
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:14:19-50
 activity#com.pratishaad.homelibrarymanagement.BibliophileCompanion
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:12:9-67
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:15:9-58
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:12:19-55
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:15:19-55
 activity#com.pratishaad.homelibrarymanagement.ViewLentBooks
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:13:9-51
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:16:9-51
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:13:19-48
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:16:19-48
 activity#com.pratishaad.homelibrarymanagement.LendBook
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:14:9-46
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:17:9-46
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:14:19-43
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:17:19-43
 activity#com.pratishaad.homelibrarymanagement.ViewBooks
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:15:9-47
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:18:9-47
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:15:19-44
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:18:19-44
 activity#com.pratishaad.homelibrarymanagement.AddBook
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:16:9-45
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:19:9-45
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:16:19-42
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:19:19-42
 activity#com.pratishaad.homelibrarymanagement.MainActivity
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:17:9-50
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:20:9-50
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:17:19-47
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:20:19-47
 activity#com.pratishaad.homelibrarymanagement.Login
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:19:9-43
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:22:9-43
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:19:19-40
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:22:19-40
 activity#com.pratishaad.homelibrarymanagement.Register
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:20:9-26:20
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:23:9-29:20
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:20:19-43
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:23:19-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:21:13-25:29
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:22:17-69
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:22:25-66
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:24:17-77
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:24:27-74
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:27:27-74
 meta-data#com.google.firebase.ml.vision.DEPENDENCIES
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:28:9-30:35
-	android:value
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:30:13-32
-	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:29:13-70
-meta-data#com.google.mlkit.vision.DEPENDENCIES
 ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:31:9-33:35
 	android:value
 		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:33:13-32
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:32:13-64
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:32:13-70
+meta-data#com.google.mlkit.vision.DEPENDENCIES
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:34:9-36:35
+	android:value
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:36:13-32
+	android:name
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:35:13-64
 meta-data#preloaded_fonts
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:34:9-36:57
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:37:9-39:57
 	android:resource
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:36:13-54
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:39:13-54
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:35:13-43
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:38:13-43
 uses-feature#android.hardware.camera
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:50:5-52:35
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:52:5-54:35
 	android:required
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:52:9-32
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:54:9-32
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:51:9-47
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:53:9-47
 uses-permission#android.permission.CAMERA
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:53:5-65
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:55:5-65
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:53:22-62
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:55:22-62
 uses-permission#android.permission.INTERNET
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:55:5-67
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:56:5-67
 MERGED from [com.google.firebase:firebase-auth:20.0.3] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/2f8beb3c4a6671f2d9e8e4657f06a562/jetified-firebase-auth-20.0.3/AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:20.0.3] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/2f8beb3c4a6671f2d9e8e4657f06a562/jetified-firebase-auth-20.0.3/AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-database:19.7.0] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/edc1c19b08d036ca947936e9d0e21547/jetified-firebase-database-19.7.0/AndroidManifest.xml:26:5-67
@@ -280,11 +292,11 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.2] /User
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.2] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/4d4103ecf8a4d7d0d63b7910e6383c0b/jetified-play-services-measurement-sdk-api-18.0.2/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.2] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/4d4103ecf8a4d7d0d63b7910e6383c0b/jetified-play-services-measurement-sdk-api-18.0.2/AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:55:22-64
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:56:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:57:5-58:68
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:58:5-81
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:58:9-65
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:58:22-78
 uses-sdk
 INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml
@@ -446,11 +458,11 @@ INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main
 		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:43:13-45:58
+ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:46:13-48:58
 	android:resource
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:45:17-55
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:48:17-55
 	android:name
-		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:44:17-67
+		ADDED from /Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/src/main/AndroidManifest.xml:47:17-67
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:20.0.3] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/2f8beb3c4a6671f2d9e8e4657f06a562/jetified-firebase-auth-20.0.3/AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-database:19.7.0] /Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/edc1c19b08d036ca947936e9d0e21547/jetified-firebase-database-19.7.0/AndroidManifest.xml:25:5-79
