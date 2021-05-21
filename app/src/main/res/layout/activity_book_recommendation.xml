@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BibliophileCompanion">
+    tools:context=".BookRecommendation">
 
     <WebView
         android:id="@+id/webView"
-        android:layout_width="410dp"
-        android:layout_height="649dp"
+        android:layout_width="411dp"
+        android:layout_height="656dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,10 +25,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webView"
         app:layout_constraintVertical_bias="0.437" />
-</androidx.constraintlayout.widget.ConstraintLayout>
-    <!--<WebView  xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/webview"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
 
-        />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

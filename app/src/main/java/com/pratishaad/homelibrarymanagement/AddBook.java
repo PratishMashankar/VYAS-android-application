@@ -241,7 +241,7 @@ public class AddBook extends AppCompatActivity {
                         mCurrentlyReading=radioButton.getText().toString();
                         if(mCurrentlyReading.equals(null)) mCurrentlyReading="No";
 
-                        String mlendBookBool="No";
+                        String mlendBookBool="This book has not been lent";
                         String mLendLendeeName="N/A";
                         String mLendGiveDate="N/A";
                         String mLendReceiveDate="N/A";

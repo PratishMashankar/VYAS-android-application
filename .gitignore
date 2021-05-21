@@ -1,9 +1,10 @@
 *.iml
-/.idea
-
+./idea
 .gradle
-/app/build
 /local.properties
+.idea
+/.idea
+/.idea/vcs.xml
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml

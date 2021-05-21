@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,14 +27,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        viewbooks = findViewById(R.id.viewbooks);
-        addbook = findViewById(R.id.addbook);
-        lendbooks = findViewById(R.id.lendbooks);
-        viewlentbooks = findViewById(R.id.viewlentbooks);
-        logout = findViewById(R.id.logoutbtn);
-        bibcom =  findViewById(R.id.bibcom) ;
+        viewbooks = (Button) findViewById(R.id.viewbooks);
+        addbook = (Button) findViewById(R.id.addbook);
+        lendbooks = (Button) findViewById(R.id.lendbooks);
+        viewlentbooks = (Button) findViewById(R.id.viewlentbooks);
+        logout = (Button) findViewById(R.id.logoutbtn);
+        bibcom = (Button) findViewById(R.id.bibcom) ;
+        recommendation = (Button) findViewById(R.id.bookrecommendation) ;
         fAuth = FirebaseAuth.getInstance();
-        recommendation= findViewById(R.id.recom);
 
         viewbooks.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,14 +72,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        recommendation.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(getApplicationContext(),BookRecommendation.class));
-//            }
-//        });
-
-
+        recommendation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),BookRecommendation.class));
+            }
+        });
 
 
 
@@ -94,5 +93,9 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public FirebaseUser getFirebaseUser() {
+        return FirebaseAuth.getInstance().getCurrentUser();
     }
 }
