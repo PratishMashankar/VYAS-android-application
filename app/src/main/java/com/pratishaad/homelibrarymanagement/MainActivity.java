@@ -13,10 +13,11 @@ public class MainActivity extends AppCompatActivity {
 
     Button viewbooks;
     Button addbook;
-    Button lendbook;
+    Button lendbooks;
     Button viewlentbooks;
     Button logout;
     Button bibcom;
+    Button recommendation;
     FirebaseAuth fAuth;
 
 
@@ -25,13 +26,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        viewbooks = (Button) findViewById(R.id.viewbooks);
-        addbook = (Button) findViewById(R.id.addbook);
-        lendbook = (Button) findViewById(R.id.lendbook);
-        viewlentbooks = (Button) findViewById(R.id.viewlentbooks);
-        logout = (Button) findViewById(R.id.logoutbtn);
-        bibcom = (Button) findViewById(R.id.bibcom) ;
+        viewbooks = findViewById(R.id.viewbooks);
+        addbook = findViewById(R.id.addbook);
+        lendbooks = findViewById(R.id.lendbooks);
+        viewlentbooks = findViewById(R.id.viewlentbooks);
+        logout = findViewById(R.id.logoutbtn);
+        bibcom =  findViewById(R.id.bibcom) ;
         fAuth = FirebaseAuth.getInstance();
+        recommendation= findViewById(R.id.recom);
 
         viewbooks.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        lendbook.setOnClickListener(new View.OnClickListener() {
+        lendbooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),LendBook.class));
+                startActivity(new Intent(getApplicationContext(),ViewBooks.class));
             }
         });
 
@@ -68,6 +70,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),BibliophileCompanion.class));
             }
         });
+
+//        recommendation.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(getApplicationContext(),BookRecommendation.class));
+//            }
+//        });
+
+
 
 
 

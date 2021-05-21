@@ -29,13 +29,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bibcom"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
         app:layout_constraintVertical_bias="1.0" />
 
     <TableLayout
         android:id="@+id/tableLayout2"
-        android:layout_width="307dp"
-        android:layout_height="308dp"
+        android:layout_width="309dp"
+        android:layout_height="467dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -59,10 +59,10 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="308dp">
 
             <Button
-                android:id="@+id/lendbook"
+                android:id="@+id/lendbooks"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:text="Lend Book" />
@@ -73,17 +73,35 @@
                 android:layout_height="150dp"
                 android:text="View Lent Books" />
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <Button
+                android:id="@+id/bibcom"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="BibCom" />
+
+            <Button
+                android:id="@+id/recom"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="recommendation"
+                android:textSize="12dp" />
+        </TableRow>
     </TableLayout>
 
-    <Button
-        android:id="@+id/bibcom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Bib Com"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+<!--    <Button-->
+<!--        android:id="@+id/bibcom"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:text="Bib Com"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
