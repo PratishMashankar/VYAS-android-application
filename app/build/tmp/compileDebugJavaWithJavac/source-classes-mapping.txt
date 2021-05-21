@@ -10,6 +10,11 @@ com/pratishaad/homelibrarymanagement/Login.java
  com.pratishaad.homelibrarymanagement.Login$1
  com.pratishaad.homelibrarymanagement.Login$1$1
  com.pratishaad.homelibrarymanagement.Login$2
+com/pratishaad/homelibrarymanagement/BookRecommendation.java
+ com.pratishaad.homelibrarymanagement.BookRecommendation
+ com.pratishaad.homelibrarymanagement.BookRecommendation$1
+ com.pratishaad.homelibrarymanagement.BookRecommendation$2
+ com.pratishaad.homelibrarymanagement.BookRecommendation$3
 com/pratishaad/homelibrarymanagement/MainActivity.java
  com.pratishaad.homelibrarymanagement.MainActivity
  com.pratishaad.homelibrarymanagement.MainActivity$1
@@ -18,6 +23,7 @@ com/pratishaad/homelibrarymanagement/MainActivity.java
  com.pratishaad.homelibrarymanagement.MainActivity$4
  com.pratishaad.homelibrarymanagement.MainActivity$5
  com.pratishaad.homelibrarymanagement.MainActivity$6
+ com.pratishaad.homelibrarymanagement.MainActivity$7
 com/pratishaad/homelibrarymanagement/Book.java
  com.pratishaad.homelibrarymanagement.Book
 com/pratishaad/homelibrarymanagement/BibliophileCompanion.java
@@ -26,6 +32,8 @@ com/pratishaad/homelibrarymanagement/BibliophileCompanion.java
  com.pratishaad.homelibrarymanagement.BibliophileCompanion$2
  com.pratishaad.homelibrarymanagement.BibliophileCompanion$3
  com.pratishaad.homelibrarymanagement.BibliophileCompanion$4
+ com.pratishaad.homelibrarymanagement.JsObject
+ com.pratishaad.homelibrarymanagement.JsObject$1
 com/pratishaad/homelibrarymanagement/LendBook.java
  com.pratishaad.homelibrarymanagement.LendBook
 com/pratishaad/homelibrarymanagement/ViewBooks.java

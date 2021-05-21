@@ -29,13 +29,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bibcom"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
         app:layout_constraintVertical_bias="1.0" />
 
     <TableLayout
         android:id="@+id/tableLayout2"
-        android:layout_width="307dp"
-        android:layout_height="308dp"
+        android:layout_width="313dp"
+        android:layout_height="469dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -73,17 +73,24 @@
                 android:layout_height="150dp"
                 android:text="View Lent Books" />
         </TableRow>
-    </TableLayout>
 
-    <Button
-        android:id="@+id/bibcom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Bib Com"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="185dp">
+
+            <Button
+                android:id="@+id/bibcom"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="BibCom" />
+
+            <Button
+                android:id="@+id/bookrecommendation"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="Recommendation "
+                android:textSize="12dp" />
+        </TableRow>
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

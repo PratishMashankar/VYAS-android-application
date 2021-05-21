@@ -1828,6 +1828,7 @@ id book_lendGiveDate
 id book_lendLendeeName
 id book_lendReceiveDate
 id book_title
+id bookrecommendation
 id bottom
 id bounce
 id buttonPanel
@@ -2292,6 +2293,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_book
 layout activity_bibliophile_companion
+layout activity_book_recommendation
 layout activity_lend_book
 layout activity_lend_book_details
 layout activity_login
