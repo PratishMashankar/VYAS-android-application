@@ -1,6 +1,12 @@
 package com.pratishaad.homelibrarymanagement;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
+
 import android.Manifest;
+import android.app.DirectAction;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -10,16 +16,16 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -32,6 +38,10 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.google.mlkit.vision.common.InputImage;
+import com.google.mlkit.vision.label.ImageLabel;
+import com.google.mlkit.vision.label.ImageLabeler;
+import com.google.mlkit.vision.label.ImageLabeling;
+import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
 import com.google.mlkit.vision.text.Text;
 import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.TextRecognizer;
@@ -44,6 +54,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 public class AddBook extends AppCompatActivity {
 
@@ -51,6 +63,8 @@ public class AddBook extends AppCompatActivity {
     ImageView coverimg,titleimg,authimg,ifbnimg,descimg;
     Spinner genre;
     Button addbook, addanotherbook, clearbtn;
+    RadioButton radioButton;
+    RadioGroup radioGroup;
     final int REQUEST_IMAGE_CAPTURE = 1;
 
 
@@ -82,6 +96,8 @@ public class AddBook extends AppCompatActivity {
         descimg=(ImageView)findViewById(R.id.descimg);
 
         genre=(Spinner)findViewById(R.id.genre);
+
+        radioGroup=(RadioGroup)findViewById(R.id.radio_group_currentlyReading);
 
         addbook=(Button)findViewById(R.id.addbook);
         clearbtn=(Button)findViewById(R.id.clear);
@@ -210,6 +226,7 @@ public class AddBook extends AppCompatActivity {
                 imgRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
+                        Uri downloadURI = uri;
 
                         String mTitle=title.getText().toString().trim();
                         String mAuthor=author.getText().toString().trim();
@@ -217,13 +234,25 @@ public class AddBook extends AppCompatActivity {
                         String mDescription=desc.getText().toString().trim();
                         String mGenre=genre.getSelectedItem().toString();
                         String mImageFirebaseURI="";
+                        String mCurrentlyReading="";
+
+                        int selectedId = radioGroup.getCheckedRadioButtonId();
+                        radioButton = (RadioButton) findViewById(selectedId);
+                        mCurrentlyReading=radioButton.getText().toString();
+                        if(mCurrentlyReading.equals(null)) mCurrentlyReading="No";
+
+                        String mlendBookBool="This book has not been lent";
+                        String mLendLendeeName="N/A";
+                        String mLendGiveDate="N/A";
+                        String mLendReceiveDate="N/A";
+
 
                         if(!(TextUtils.isEmpty(mTitle)) ){
                             String uid=fAuth.getUid();
                             String books="AllBooks";
                             String bookID = databaseRef.child(uid).push().getKey();
-                            mImageFirebaseURI=uri.toString();
-                            Book book = new Book(bookID,mTitle,mAuthor,mISBN,mDescription,mGenre,mImageFirebaseURI);
+                            mImageFirebaseURI=downloadURI.toString();
+                            Book book = new Book(bookID,mTitle,mAuthor,mISBN,mDescription,mGenre,mImageFirebaseURI,mCurrentlyReading,mlendBookBool,mLendLendeeName,mLendGiveDate,mLendReceiveDate);
                             databaseRef.child(uid).child(books).child(bookID).setValue(book);
                             Toast.makeText(getApplicationContext(),"This Book has been added ",Toast.LENGTH_SHORT).show();
                         }else{
@@ -234,7 +263,7 @@ public class AddBook extends AppCompatActivity {
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
-            public void onFailure(Exception e) {
+            public void onFailure(@NonNull @org.jetbrains.annotations.NotNull Exception e) {
                 Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });

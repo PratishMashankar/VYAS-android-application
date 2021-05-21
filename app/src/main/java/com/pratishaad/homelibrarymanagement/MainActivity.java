@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button viewbooks;
     Button addbook;
-    Button lendbook;
+    Button lendbooks;
     Button viewlentbooks;
     Button logout;
     Button bibcom;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewbooks = (Button) findViewById(R.id.viewbooks);
         addbook = (Button) findViewById(R.id.addbook);
-        lendbook = (Button) findViewById(R.id.lendbook);
+        lendbooks = (Button) findViewById(R.id.lendbooks);
         viewlentbooks = (Button) findViewById(R.id.viewlentbooks);
         logout = (Button) findViewById(R.id.logoutbtn);
         bibcom = (Button) findViewById(R.id.bibcom) ;
@@ -49,10 +49,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        lendbook.setOnClickListener(new View.OnClickListener() {
+        lendbooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),LendBook.class));
+                startActivity(new Intent(getApplicationContext(),ViewBooks.class));
             }
         });
 
