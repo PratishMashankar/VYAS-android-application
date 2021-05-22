@@ -114,8 +114,6 @@ public class BibliophileCompanion extends AppCompatActivity {
 
                     }
                 });*/
-                mWebView.addJavascriptInterface(new JsObject(mWebView, loadingView), "CallToAnAndroidFunction");
-
             }
         });
 
@@ -157,26 +155,3 @@ public class BibliophileCompanion extends AppCompatActivity {
         }
     }
 }
- class JsObject {
-    private View loadingView;
-    private View view;
-    JsObject(View view, View loadingView){this.view = view;this.loadingView = loadingView;}
-    Activity activity;
-    public void MyAndroidThread(Activity activity)
-    {
-        this.activity = activity;
-    }
-    @JavascriptInterface
-
-
-        public void setVisible(){
-            activity.runOnUiThread(new Runnable() {
-
-                @Override
-                public void run() {
-                    view.setVisibility(View.VISIBLE);
-                    loadingView.setVisibility(View.INVISIBLE);
-                }
-            });
-        }
- }
