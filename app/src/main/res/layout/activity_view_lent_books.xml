@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ViewLentBooks">
-<androidx.recyclerview.widget.RecyclerView
+
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recLent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

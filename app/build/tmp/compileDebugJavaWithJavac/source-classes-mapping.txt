@@ -8,6 +8,7 @@ com/pratishaad/homelibrarymanagement/Login.java
  com.pratishaad.homelibrarymanagement.Login$2
 com/pratishaad/homelibrarymanagement/ArticleAdapter.java
  com.pratishaad.homelibrarymanagement.ArticleAdapter
+ com.pratishaad.homelibrarymanagement.ArticleAdapter$OnRecyclerViewItemClickListener
  com.pratishaad.homelibrarymanagement.ArticleAdapter$ViewHolder
 com/pratishaad/homelibrarymanagement/BookRecommendation.java
  com.pratishaad.homelibrarymanagement.BookRecommendation
@@ -38,6 +39,7 @@ com/pratishaad/homelibrarymanagement/LendBook.java
 com/pratishaad/homelibrarymanagement/ViewBooks.java
  com.pratishaad.homelibrarymanagement.ViewBooks
  com.pratishaad.homelibrarymanagement.ViewBooks$1
+ com.pratishaad.homelibrarymanagement.ViewBooks$1$1
 com/pratishaad/homelibrarymanagement/LendBookDetails.java
  com.pratishaad.homelibrarymanagement.LendBookDetails
  com.pratishaad.homelibrarymanagement.LendBookDetails$1
@@ -57,8 +59,6 @@ com/pratishaad/homelibrarymanagement/Register.java
  com.pratishaad.homelibrarymanagement.Register$1
  com.pratishaad.homelibrarymanagement.Register$1$1
  com.pratishaad.homelibrarymanagement.Register$2
-com/pratishaad/homelibrarymanagement/ArticleList.java
- com.pratishaad.homelibrarymanagement.ArticleList
 com/pratishaad/homelibrarymanagement/ViewBookDetails.java
  com.pratishaad.homelibrarymanagement.ViewBookDetails
  com.pratishaad.homelibrarymanagement.ViewBookDetails$1

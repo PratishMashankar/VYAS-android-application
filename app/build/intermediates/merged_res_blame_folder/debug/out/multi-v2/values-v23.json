@@ -4,26 +4,7 @@
             "outputFile": "/Users/vasishtasreevarsh/Desktop/College/4-2 sem/VYAS/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/2358f0a8184660719ed15ad9f704c812/cardview-1.0.0/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "200"
-                    },
-                    "to": {
-                        "startLines": "50",
-                        "startColumns": "4",
-                        "startOffsets": "3524",
-                        "endLines": "52",
-                        "endColumns": "12",
-                        "endOffsets": "3669"
-                    }
-                },
-                {
-                    "source": "/Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/f02bb9d517082bf92d89d4806eb5fbd4/material-1.3.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/cbf08dde3da20d56d9ed7b206137cd9a/material-1.3.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",
@@ -42,7 +23,26 @@
                     }
                 },
                 {
-                    "source": "/Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/0365516b2f0a38fd96a530e99ca676ab/appcompat-1.2.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/6f8a1c65b62d3d41d59ae57c34d2003d/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "3524",
+                        "endLines": "52",
+                        "endColumns": "12",
+                        "endOffsets": "3669"
+                    }
+                },
+                {
+                    "source": "/Users/vasishtasreevarsh/.gradle/caches/transforms-2/files-2.1/e7700bf3fcf4236768ca476b82b72080/appcompat-1.2.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
