@@ -8,6 +8,12 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.pratishaad.homelibrarymanagement.addbooks.AddBook;
+import com.pratishaad.homelibrarymanagement.authentication.Login;
+import com.pratishaad.homelibrarymanagement.bibliophilecompanion.AllProjects;
+import com.pratishaad.homelibrarymanagement.bookrecommendation.BookRecommendation;
+import com.pratishaad.homelibrarymanagement.lentbooks.ViewLentBooks;
+import com.pratishaad.homelibrarymanagement.viewbooks.ViewBooks;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button lendbooks;
     Button viewlentbooks;
     Button logout;
-    Button bibcom;
+    Button allprojects;
     Button recommendation;
     FirebaseAuth fAuth;
 
@@ -31,21 +37,21 @@ public class MainActivity extends AppCompatActivity {
         lendbooks = (Button) findViewById(R.id.lendbooks);
         viewlentbooks = (Button) findViewById(R.id.viewlentbooks);
         logout = (Button) findViewById(R.id.logoutbtn);
-        bibcom = (Button) findViewById(R.id.bibcom) ;
+        allprojects = (Button) findViewById(R.id.allprojects) ;
         recommendation = (Button) findViewById(R.id.bookrecommendation) ;
         fAuth = FirebaseAuth.getInstance();
 
         viewbooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),ViewBooks.class));
+                startActivity(new Intent(getApplicationContext(), ViewBooks.class));
             }
         });
 
         addbook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),AddBook.class);
+                Intent i = new Intent(getApplicationContext(), AddBook.class);
                 startActivity(i);
             }
         });
@@ -60,21 +66,21 @@ public class MainActivity extends AppCompatActivity {
         viewlentbooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),ViewLentBooks.class));
+                startActivity(new Intent(getApplicationContext(), ViewLentBooks.class));
             }
         });
 
-        bibcom.setOnClickListener(new View.OnClickListener() {
+        allprojects.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),BibliophileCompanion.class));
+                startActivity(new Intent(getApplicationContext(), AllProjects.class));
             }
         });
 
         recommendation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),BookRecommendation.class));
+                startActivity(new Intent(getApplicationContext(), BookRecommendation.class));
             }
         });
 

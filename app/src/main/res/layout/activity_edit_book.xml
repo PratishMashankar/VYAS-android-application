@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewbooks.ViewBookDetails">
+    tools:context=".viewbooks.EditBook">
 
     <ImageView
         android:id="@+id/viewBookDetailsImageView"
@@ -38,18 +38,17 @@
 
                 <TextView
                     android:id="@+id/h1"
-                    android:layout_width="124dp"
+                    android:layout_width="130dp"
                     android:background="#750303"
                     android:text="Title:"
                     android:textColor="#F4EFEF"
                     android:textSize="20dp"
                     android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/editTitle"
 
-                <TextView
-                    android:id="@+id/book_title"
-                    android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="20dp" />
+                    />
+
             </TableRow>
 
             <TableRow
