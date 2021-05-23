@@ -1,4 +1,4 @@
-package com.pratishaad.homelibrarymanagement;
+package com.pratishaad.homelibrarymanagement.authentication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.pratishaad.homelibrarymanagement.MainActivity;
+import com.pratishaad.homelibrarymanagement.R;
 
 public class Login extends AppCompatActivity {
 
@@ -68,7 +70,7 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(Login.this, "Login, successful. Welcome!", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                            Intent i = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(i);
                         }else {
                             Toast.makeText(Login.this, "ERROR ! "+task.getException().getMessage(), Toast.LENGTH_SHORT).show();

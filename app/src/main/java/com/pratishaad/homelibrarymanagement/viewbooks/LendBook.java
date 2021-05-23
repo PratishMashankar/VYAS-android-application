@@ -1,8 +1,10 @@
-package com.pratishaad.homelibrarymanagement;
+package com.pratishaad.homelibrarymanagement.viewbooks;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.pratishaad.homelibrarymanagement.R;
 
 public class LendBook extends AppCompatActivity {
 

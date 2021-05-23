@@ -1,4 +1,4 @@
-package com.pratishaad.homelibrarymanagement;
+package com.pratishaad.homelibrarymanagement.authentication;
 
 public class RegisterClassDB {
     String userID;

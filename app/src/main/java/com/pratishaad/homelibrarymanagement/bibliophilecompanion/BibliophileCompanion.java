@@ -1,9 +1,10 @@
-package com.pratishaad.homelibrarymanagement;
+package com.pratishaad.homelibrarymanagement.bibliophilecompanion;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.webkit.JavascriptInterface;
+import android.webkit.ValueCallback;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -15,6 +16,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.pratishaad.homelibrarymanagement.R;
+
 public class BibliophileCompanion extends AppCompatActivity {
     WebView mWebView;
     View loadingView;
@@ -23,6 +29,9 @@ public class BibliophileCompanion extends AppCompatActivity {
     EditText enterURL;
 
     String highlightURL;
+
+    DatabaseReference databaseReference;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,19 +53,8 @@ public class BibliophileCompanion extends AppCompatActivity {
         //pre load google
         mWebView.loadUrl("https://www.google.com/");
 
-        final String highlightscript = " <script language=\"javascript\">" +
-
-                "function highlightSelection(){" +
-                "var userSelection = window.getSelection();" +
-                "for(var i = 0; i < userSelection.rangeCount; i++)"
-                + "  highlightRange(userSelection.getRangeAt(i));" +
-                "}" +
-                "function highlightRange(range){"+
-                "span = document.createElement(\"span\");"+
-                "span.appendChild(range.extractContents());"+
-                "span.setAttribute(\"style\",\"display:block;background:#ffc570;\");"+
-                "range.insertNode(span);}"+
-                "</script> ";
+        firebaseAuth=FirebaseAuth.getInstance();
+        databaseReference= FirebaseDatabase.getInstance().getReference().child(firebaseAuth.getUid());
 
         //search button
         searchBtn.setOnClickListener(new View.OnClickListener() {
@@ -99,49 +97,40 @@ public class BibliophileCompanion extends AppCompatActivity {
             }
         });
 
+        Bundle extras = getIntent().getExtras();
+        final String projectname= (String) extras.get("Project Name");
         //Highlight Text
         highlightBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "highlight begin", Toast.LENGTH_SHORT).show();
                 highlightURL = mWebView.getUrl();
-                Toast.makeText(getApplicationContext(), highlightURL, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), highlightURL, Toast.LENGTH_SHORT).show();
+                mWebView.evaluateJavascript("(function(){return window.getSelection().toString()})()",
+                        new ValueCallback<String>()
+                        {
+                            @Override
+                            public void onReceiveValue(String value)
+                            {
+                                try {
+                                    Highlights highlights = new Highlights(highlightURL, value);
 
-                //mWebView.loadDataWithBaseURL(null,highlightscript,"text/html","utf-8",null);*/
-                /*mWebView.evaluateJavascript("", new ValueCallback<String>() {
-                    @Override
-                    public void onReceiveValue(String s) {
+                                    String highlightID=databaseReference.child("Projects").child(projectname).push().getKey();
 
-                    }
-                });*/
+                                    databaseReference.child("Projects").child(projectname).child(highlightID).setValue(highlights);
+
+                                    Toast.makeText(getApplicationContext(), "Highlight added", Toast.LENGTH_SHORT).show();
+
+                                }catch (Exception e){
+                                    Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
             }
         });
 
     }
-    public void onPageFinished(WebView view, String url) {
 
-        view.loadUrl("javascript:"
-                + "var FunctionOne = function () {"
-                + "  var r = $.Deferred();"
-                + "  try{document.getElementsByClassName('header')[0].style.display='none';}catch(e){}"
-                + "  try{document.getElementById('section_0').style.display='none';}catch(e){}"
-                + "  try{document.getElementById('page-actions').style.display='none';}catch(e){}"
-                + "  try{document.getElementsByClassName('languageSelector')[0].style.display='none';}catch(e){}"
-                + "  try{document.getElementById('mw-mf-last-modified').style.display='none';}catch(e){}"
-                + "  try{document.getElementById('footer').style.display='none';}catch(e){}"
-                + "  setTimeout(function () {"
-                + "    r.resolve();"
-                + "  }, 2500);"
-                + "  return r;"
-                + "};"
-                + "var FunctionTwo = function () {"
-                + "  window.CallToAnAndroidFunction.setVisible();"
-                + "};"
-                + "FunctionOne().done(FunctionTwo);");
-
-        loadingView.setVisibility(View.INVISIBLE);
-        view.setVisibility(View.VISIBLE);
-    }
 
     //remember history and go back press
     @Override

@@ -1,15 +1,12 @@
-package com.pratishaad.homelibrarymanagement;
+package com.pratishaad.homelibrarymanagement.lentbooks;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,12 +16,8 @@ import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
+import com.pratishaad.homelibrarymanagement.R;
+import com.pratishaad.homelibrarymanagement.viewbooks.ViewBooks;
 
 public class LendBookDetails extends AppCompatActivity {
 
@@ -71,7 +64,7 @@ public class LendBookDetails extends AppCompatActivity {
                     databaseRef.child("lendGiveDate").setValue(mGiveDate);
                     databaseRef.child("lendReceiveDate").setValue(mReceiveDate);
                     Toast.makeText(getApplicationContext(), "The book has been lent to "+mLendee, Toast.LENGTH_SHORT).show();
-                    Intent intent= new Intent(getApplicationContext(),ViewBooks.class);
+                    Intent intent= new Intent(getApplicationContext(), ViewBooks.class);
                     startActivity(intent);
                 }
                 else if(mLendee.isEmpty()) Toast.makeText(getApplicationContext(),"Enter Lendee Name",Toast.LENGTH_SHORT).show();

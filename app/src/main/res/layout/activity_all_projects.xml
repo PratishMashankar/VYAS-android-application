@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bibliophilecompanion.AllProjects">
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="394dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="40dp"
+        android:text="Welcome to Bibliophile Companion"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Choose a project"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="306dp"
+        android:layout_height="316dp"
+        android:layout_marginBottom="156dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/project1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="Project 1" />
+
+            <Button
+                android:id="@+id/project2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="Project 2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/project3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="Project 3" />
+
+            <Button
+                android:id="@+id/project4"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="Project 4" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

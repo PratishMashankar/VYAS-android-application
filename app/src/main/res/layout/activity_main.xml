@@ -76,13 +76,14 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="185dp">
+            android:layout_height="174dp">
 
             <Button
-                android:id="@+id/bibcom"
+                android:id="@+id/allprojects"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:text="BibCom" />
+                android:text="Web Highlights"
+                android:textSize="12dp" />
 
             <Button
                 android:id="@+id/bookrecommendation"

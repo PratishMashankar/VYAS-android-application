@@ -1,4 +1,4 @@
-package com.pratishaad.homelibrarymanagement;
+package com.pratishaad.homelibrarymanagement.addbooks;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,6 +45,8 @@ import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
 import com.google.mlkit.vision.text.Text;
 import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.TextRecognizer;
+import com.pratishaad.homelibrarymanagement.Book;
+import com.pratishaad.homelibrarymanagement.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

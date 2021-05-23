@@ -1,4 +1,4 @@
-package com.pratishaad.homelibrarymanagement;
+package com.pratishaad.homelibrarymanagement.lentbooks;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.pratishaad.homelibrarymanagement.Book;
+import com.pratishaad.homelibrarymanagement.R;
 
 import java.util.List;
 
