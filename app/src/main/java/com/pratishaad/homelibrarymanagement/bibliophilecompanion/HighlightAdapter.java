@@ -41,7 +41,7 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_highlight_list,parent,false);
-        return new ViewHolder(view);
+        return new ViewHolder(view, mOnRecyclerViewItemClickListener);
     }
 
     @Override
@@ -64,11 +64,11 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
         OnRecyclerViewItemClickListener onRecyclerViewItemClickListener;
 
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView, OnRecyclerViewItemClickListener mOnRecyclerViewItemClickListener) {
             super(itemView);
             highlightURL=itemView.findViewById(R.id.link_details);
             highlightText=itemView.findViewById(R.id.highlight_details);
-//            this.onRecyclerViewItemClickListener=onRecyclerViewItemClickListener;
+            this.onRecyclerViewItemClickListener=onRecyclerViewItemClickListener;
 
             itemView.setOnClickListener(this);
 
@@ -83,6 +83,6 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
 
     public interface OnRecyclerViewItemClickListener
     {
-        public void onRecyclerViewItemClicked(int position);
+        void onRecyclerViewItemClicked(int position);
     }
 }

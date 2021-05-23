@@ -3,10 +3,12 @@ package com.pratishaad.homelibrarymanagement.lentbooks;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,15 +21,18 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.pratishaad.homelibrarymanagement.R;
 import com.pratishaad.homelibrarymanagement.viewbooks.ViewBooks;
 
+import java.util.Calendar;
+
 public class LendBookDetails extends AppCompatActivity {
 
-    TextView lendTitle,lendAuthor,textGiveBook,textReceiveBook;
+    TextView lendTitle,lendAuthor,textGiveBook,textReceiveBook, lendGiveDate, lendReceiveDate;
     ImageView lendCoverImage;
-    EditText lendeeName, lendGiveDate, lendReceiveDate;
+    EditText lendeeName;
     Button confirmButtonLend;
     FirebaseAuth fAuth;
     DatabaseReference databaseRef;
-    DatePickerDialog.OnDateSetListener setListener;
+    int year,month, day;
+    int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +44,8 @@ public class LendBookDetails extends AppCompatActivity {
         textReceiveBook=(TextView)findViewById(R.id.textReceiveDate);
         lendCoverImage=(ImageView)findViewById(R.id.lendImageView);
         lendeeName=(EditText)findViewById(R.id.lendeeName);
-        lendGiveDate=(EditText)findViewById(R.id.lendGiveDate);
-        lendReceiveDate=(EditText)findViewById(R.id.lendReceiveDate);
+        lendGiveDate=(TextView) findViewById(R.id.lendGiveDate);
+        lendReceiveDate=(TextView) findViewById(R.id.lendReceiveDate);
         confirmButtonLend=(Button)findViewById(R.id.confirmButtonLend);
 
         final Bundle extras = getIntent().getExtras();
@@ -50,6 +55,15 @@ public class LendBookDetails extends AppCompatActivity {
         lendTitle.setText(extras.getString("TitleLend").trim().replace("\n"," "));
         lendAuthor.setText(extras.getString("AuthorLend").trim().replace("\n"," "));
         Glide.with(getApplicationContext()).load(extras.getString("ImageLend")).into(lendCoverImage);
+
+        Calendar calendar = Calendar.getInstance();
+        year = calendar.get(Calendar.YEAR);
+
+        month = calendar.get(Calendar.MONTH);
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+        showDate(year, month+1, day);
+
+
 
         confirmButtonLend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,115 +89,59 @@ public class LendBookDetails extends AppCompatActivity {
         });
 
     }
-}
 
+    @SuppressWarnings("deprecation")
+    public void setLendDate(View view) {
+        showDialog(999);
+    }
 
-        /*//Calendar selection for lending date
-        Calendar calendar = Calendar.getInstance();
-        final int year = calendar.get(Calendar.YEAR);
-        final int month = calendar.get(Calendar.MONTH);
-        final int day = calendar.get(Calendar.DAY_OF_MONTH);
+    @SuppressWarnings("deprecation")
+    public void setReceiveDate(View view)
+    {
+        showDialog(998);
+    }
 
-        textGiveBook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DatePickerDialog dpd1 = new DatePickerDialog(
-                        getApplicationContext(),android.R.style.Theme_Holo_Light_Dialog_MinWidth,
-                        setListener,year,month,day);
-                dpd1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dpd1.show();
-            }
-        });
-        setListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                month=month+1;
-                String date=dayOfMonth+"/"+month+"/"+year;
-                lendGiveDate.setText(date);
-            }
-        };
-       *//* lendGiveDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DatePickerDialog dpd1 = new DatePickerDialog(
-                        getApplicationContext(), new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                        month = month + 1;
-                        String date = day + "/" + month + "/" + year;
-                        lendGiveDate.setText(date);
-                    }
-                }, year, month, day);
-                dpd1.show();
-            }
-        });*//*
+    @SuppressWarnings("deprecation")
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        this.id=id;
+        // TODO Auto-generated method stub
+        if (id == 999) {
+            return new DatePickerDialog(this,
+                    myDateListener, year, month, day);
+        }
+        else if(id == 998)
+        {
+            return new DatePickerDialog(this, myDateListener,year,month,day);
+        }
+        return null;
+    }
 
-        //Calendar selection for receiving date
-        textReceiveBook.setOnClickListener(new View.OnClickListener() {
-                                               @Override
-                                               public void onClick(View view) {
-                                                   DatePickerDialog dpd2 = new DatePickerDialog(
-                                                           getApplicationContext(), new DatePickerDialog.OnDateSetListener() {
-                                                       @Override
-                                                       public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                                                           month = month + 1;
-                                                           String date = day + "/" + month + "/" + year;
-                                                           lendReceiveDate.setText(date);
-                                                       }
-                                                   }, year, month, day);
-                                                   dpd2.show();
-                                               }
-                                           });
-
-
-            *//*final Calendar myCalendar = Calendar.getInstance();
-            final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+    private DatePickerDialog.OnDateSetListener myDateListener = new
+            DatePickerDialog.OnDateSetListener() {
                 @Override
-                public void onDateSet(DatePicker view, int year, int monthOfYear,
-                                      int dayOfMonth) {
+                public void onDateSet(DatePicker arg0,
+                                      int arg1, int arg2, int arg3) {
                     // TODO Auto-generated method stub
-                    myCalendar.set(Calendar.YEAR, year);
-                    myCalendar.set(Calendar.MONTH, monthOfYear);
-                    myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                    String myFormat = "dd/mm/yy"; //In which you need put here
-                    SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
-                    lendGiveDate.setText(sdf.format(myCalendar.getTime()));
+                    // arg1 = year
+                    // arg2 = month
+                    // arg3 = day
+                    showDate(arg1, arg2+1, arg3);
                 }
             };
-            lendGiveDate.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    // TODO Auto-generated method stub
-                    new DatePickerDialog(getApplicationContext(), date, myCalendar
-                            .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
-                            myCalendar.get(Calendar.DAY_OF_MONTH)).show();
-                }
-            });
 
-        //Calendar selection for receiving date
-        final Calendar myCalendar2 = Calendar.getInstance();
-        final DatePickerDialog.OnDateSetListener date2 = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear,
-                                  int dayOfMonth) {
-                // TODO Auto-generated method stub
-                myCalendar2.set(Calendar.YEAR, year);
-                myCalendar2.set(Calendar.MONTH, monthOfYear);
-                myCalendar2.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                String myFormat2 = "dd/mm/yy"; //In which you need put here
-                SimpleDateFormat sdf2 = new SimpleDateFormat(myFormat2, Locale.US);
-                lendGiveDate.setText(sdf2.format(myCalendar2.getTime()));
-            }
-        };
-        lendReceiveDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                new DatePickerDialog(getApplicationContext(), date2, myCalendar2
-                        .get(Calendar.YEAR), myCalendar2.get(Calendar.MONTH),
-                        myCalendar2.get(Calendar.DAY_OF_MONTH)).show();
-            }
-        });*//*
-*/
+    private void showDate(int year, int month, int day) {
+        if (id==999) {
+            lendGiveDate.setText(new StringBuilder().append(day).append("/")
+                    .append(month).append("/").append(year));
+        }
+        else if (id == 998)
+        {
+            lendReceiveDate.setText(new StringBuilder().append(day).append("/")
+                    .append(month).append("/").append(year));
+        }
+    }
+
+}
 
 

@@ -1,12 +1,14 @@
 package com.pratishaad.homelibrarymanagement.bibliophilecompanion;
 
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -14,7 +16,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.pratishaad.homelibrarymanagement.Book;
 import com.pratishaad.homelibrarymanagement.R;
 
 import org.jetbrains.annotations.NotNull;
@@ -45,7 +46,7 @@ public class ViewHighlights extends AppCompatActivity {
         rv.setLayoutManager(new LinearLayoutManager(this));
         DividerItemDecoration decoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         rv.addItemDecoration(decoration);
-        articleLists = new ArrayList<>(); //list of highlights i.r article list is of the type List<Highlights>
+        articleLists = new ArrayList<>(); //list of highlights i.e article list is of the type List<Highlights>
         databaseReference= FirebaseDatabase.getInstance().getReference().child(fAuth.getUid()).child("Projects").child(projectname);;
         getDetails();
     }
@@ -60,7 +61,11 @@ public class ViewHighlights extends AppCompatActivity {
                     Highlights articleList = di.getValue(Highlights.class);
                     articleLists.add(articleList);
                 }
-                final HighlightAdapter adapter=new HighlightAdapter(articleLists, getApplicationContext());
+                final HighlightAdapter adapter=new HighlightAdapter(articleLists, getApplicationContext(), new HighlightAdapter.OnRecyclerViewItemClickListener() {
+                    @Override
+                    public void onRecyclerViewItemClicked(int position) {
+                    }
+                });
                 rv.setAdapter(adapter);
             }
             

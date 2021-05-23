@@ -51,46 +51,62 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <EditText
-                android:id="@+id/lendeeName"
-                android:hint="Enter Lendee Name"
-                android:textSize="12dp" />
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
 
             <TextView
                 android:text="Lendee Name"
-                android:textSize="12dp" />
+                android:textSize="12dp"
+                android:paddingRight="15dp"/>
+            <EditText
+                android:id="@+id/lendeeName"
+                android:hint="Enter Lendee Name"
+                android:textSize="12dp"
+                />
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <EditText
-                android:id="@+id/lendGiveDate"
-                android:hint="DD/MM/YYYY"
-                android:textSize="12dp" />
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
 
             <TextView
                 android:id="@+id/textGiveDate"
                 android:text="Give Date"
-                android:textSize="12dp" />
+                android:textSize="12dp"
+                android:paddingRight="15dp"
+                />
+
+            <TextView
+                android:id="@+id/lendGiveDate"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:hint="DD/MM/YYYY"
+                android:textSize="12dp"
+                android:onClick="setLendDate"/>
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <EditText
-                android:id="@+id/lendReceiveDate"
-                android:hint="DD/MM/YYYY"
-                android:textSize="12dp" />
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
 
             <TextView
                 android:id="@+id/textReceiveDate"
                 android:text="Receive Date"
-                android:textSize="12dp" />
+                android:textSize="12dp"
+                android:paddingRight="15dp"/>
+            <TextView
+                android:id="@+id/lendReceiveDate"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:hint="DD/MM/YYYY"
+                android:textSize="12dp"
+                android:onClick="setReceiveDate"/>
+
+
         </TableRow>
     </TableLayout>
 
