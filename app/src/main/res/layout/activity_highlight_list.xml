@@ -29,4 +29,27 @@
             android:text="Link Details"
             android:textSize="12dp"/>
 
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            >
+
+                <TableRow
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center">
+
+                        <Button
+                            android:id="@+id/copy_highlight"
+                            android:text="Copy"/>
+                        <Button
+                            android:id="@+id/open_highlight"
+                            android:text="Open"/>
+                        <Button
+                            android:id="@+id/delete_highlight"
+                            android:text="Yeet"/>
+
+                </TableRow>
+        </TableLayout>
+
 </LinearLayout>

@@ -22,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
 import com.pratishaad.homelibrarymanagement.Book;
+import com.pratishaad.homelibrarymanagement.MainActivity;
 import com.pratishaad.homelibrarymanagement.lentbooks.LendBookDetails;
 import com.pratishaad.homelibrarymanagement.R;
 
@@ -103,7 +104,7 @@ public class ViewBookDetails extends AppCompatActivity {
         receiveBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(databaseRef.child("lendBookBool").equals("Yes")) {
+                if(extras.getString("LendBool").equals("Yes")) {
                     Toast.makeText(getApplicationContext(), "Book received from: " + extras.getString("Lendee"), Toast.LENGTH_SHORT).show();
                     databaseRef.child("lendBookBool").setValue("No");
                     databaseRef.child("lendGiveDate").setValue("N/A");
@@ -190,5 +191,11 @@ public class ViewBookDetails extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
 }

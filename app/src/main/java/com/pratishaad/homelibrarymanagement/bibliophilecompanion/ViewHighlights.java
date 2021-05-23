@@ -3,6 +3,7 @@ package com.pratishaad.homelibrarymanagement.bibliophilecompanion;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -61,11 +62,28 @@ public class ViewHighlights extends AppCompatActivity {
                     Highlights articleList = di.getValue(Highlights.class);
                     articleLists.add(articleList);
                 }
-                final HighlightAdapter adapter=new HighlightAdapter(articleLists, getApplicationContext(), new HighlightAdapter.OnRecyclerViewItemClickListener() {
+                HighlightAdapter adapter = new HighlightAdapter(articleLists, getApplicationContext(),
+                new HighlightAdapter.buttonOnClickListener() {
                     @Override
-                    public void onRecyclerViewItemClicked(int position) {
+                    public void onClickOpen(int position) {
+
+
                     }
+//                    @Override
+//                    public void onRecyclerViewItemClicked(int position) {
+//                        Toast.makeText(getApplicationContext(),"Link opening",Toast.LENGTH_LONG).show();
+//                        try {
+//                            Uri uri = Uri.parse(articleLists.get(position).getUrl());
+//                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//                            startActivity(intent);
+//                        }
+//                        catch (Exception e)
+//                        {
+//                            Toast.makeText(getApplicationContext(),"Error "+e,Toast.LENGTH_LONG);
+//                        }
+//                    }
                 });
+
                 rv.setAdapter(adapter);
             }
             

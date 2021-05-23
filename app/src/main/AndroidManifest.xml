@@ -18,7 +18,6 @@
         <activity android:name=".viewbooks.ViewBookDetails" />
         <activity android:name=".bibliophilecompanion.BibliophileCompanion" />
         <activity android:name=".lentbooks.ViewLentBooks" />
-        <activity android:name=".viewbooks.LendBook" />
         <activity android:name=".viewbooks.ViewBooks" />
         <activity android:name=".addbooks.AddBook" />
         <activity android:name=".MainActivity" /> <!-- To use multiple models: android:value="ocr,model2,model3" -->

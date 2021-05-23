@@ -22,6 +22,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -67,6 +68,7 @@ public class AddBook extends AppCompatActivity {
     Button addbook, addanotherbook, clearbtn;
     RadioButton radioButton;
     RadioGroup radioGroup;
+    ProgressBar progressBar;
     final int REQUEST_IMAGE_CAPTURE = 1;
 
 
@@ -85,6 +87,8 @@ public class AddBook extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_book);
+
+        progressBar=(ProgressBar) findViewById(R.id.AddBookProgressBar);
 
         title=(EditText)findViewById(R.id.title);
         author=(EditText)findViewById(R.id.author);
@@ -144,6 +148,7 @@ public class AddBook extends AppCompatActivity {
         addbook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressBar.setVisibility(View.VISIBLE);
                 uploadBookToFirebase(bb);
             }
         });
@@ -221,6 +226,7 @@ public class AddBook extends AppCompatActivity {
         final String imagePath = "myimages/"+imageFileName+".jpg";
         final StorageReference imgRef = storageRef.child(imagePath);
 
+
         imgRef.putBytes(bb).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -256,6 +262,7 @@ public class AddBook extends AppCompatActivity {
                             mImageFirebaseURI=downloadURI.toString();
                             Book book = new Book(bookID,mTitle,mAuthor,mISBN,mDescription,mGenre,mImageFirebaseURI,mCurrentlyReading,mlendBookBool,mLendLendeeName,mLendGiveDate,mLendReceiveDate);
                             databaseRef.child(uid).child(books).child(bookID).setValue(book);
+                            progressBar.setVisibility(View.GONE);
                             Toast.makeText(getApplicationContext(),"This Book has been added ",Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(getApplicationContext(),"Book Failed to ADD",Toast.LENGTH_SHORT).show();

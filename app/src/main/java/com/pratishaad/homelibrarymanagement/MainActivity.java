@@ -1,19 +1,29 @@
 package com.pratishaad.homelibrarymanagement;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
 import com.pratishaad.homelibrarymanagement.addbooks.AddBook;
 import com.pratishaad.homelibrarymanagement.authentication.Login;
 import com.pratishaad.homelibrarymanagement.bibliophilecompanion.AllProjects;
 import com.pratishaad.homelibrarymanagement.bookrecommendation.BookRecommendation;
 import com.pratishaad.homelibrarymanagement.lentbooks.ViewLentBooks;
+import com.pratishaad.homelibrarymanagement.viewbooks.ViewBookDetails;
 import com.pratishaad.homelibrarymanagement.viewbooks.ViewBooks;
+
+import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -98,5 +108,26 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Confirm Exit")
+                .setMessage("Do you really want to exit the application")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        finishAffinity();
+                        System.exit(0);
+                            }
+                        })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 }
