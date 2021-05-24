@@ -102,11 +102,12 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
             //onRecyclerViewItemClickListener.onRecyclerViewItemClicked(view, getAdapterPosition());
             onRecyclerViewItemClickListener.onRecyclerViewItemClicked(getAdapterPosition());
         }
+
     }
 
     public interface OnRecyclerViewItemClickListener
     {
         //public void onRecyclerViewItemClicked(View v, int position);
-        public void onRecyclerViewItemClicked(int position);
+        void onRecyclerViewItemClicked(int position);
     }
 }

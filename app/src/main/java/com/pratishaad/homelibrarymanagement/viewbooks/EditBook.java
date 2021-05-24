@@ -97,4 +97,8 @@ public class EditBook extends AppCompatActivity {
 
 
     }
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), ViewBooks.class);
+        startActivity(intent);
+    }
 }

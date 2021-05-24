@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.pratishaad.homelibrarymanagement.Book;
 import com.pratishaad.homelibrarymanagement.R;
+import com.pratishaad.homelibrarymanagement.viewbooks.ArticleAdapter;
 
 import java.util.List;
 
@@ -26,15 +27,18 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
 
     List<Highlights>articleLists;
     Context ct;
+    OnRecyclerViewItemClickListener monRecyclerViewItemClickListener;
+    OnRecyclerViewItemLongClickListener monRecyclerViewItemLongClickListener;
     //buttonOnClickListener buttonOnClickListener;
 
     public HighlightAdapter(){}
 
-//    public HighlightAdapter(List<Highlights> articleLists, Context ct, buttonOnClickListener buttonOnClickListener) {
-//        this.articleLists = articleLists;
-//        this.ct = ct;
-//        //this.buttonOnClickListener=buttonOnClickListener;
-//    }
+    public HighlightAdapter(List<Highlights> articleLists, Context ct, OnRecyclerViewItemClickListener mOnRecyclerViewItemClickListener, OnRecyclerViewItemLongClickListener monRecyclerViewItemLongClickListener) {
+        this.articleLists = articleLists;
+        this.ct = ct;
+        this.monRecyclerViewItemClickListener=mOnRecyclerViewItemClickListener;
+        this.monRecyclerViewItemLongClickListener=monRecyclerViewItemLongClickListener;
+    }
 
     public HighlightAdapter(List<Highlights> articleLists, Context applicationContext) {
         this.articleLists = articleLists;
@@ -45,7 +49,7 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_highlight_list,parent,false);
-        return new ViewHolder(view);
+        return new ViewHolder(view, monRecyclerViewItemClickListener, monRecyclerViewItemLongClickListener);
     }
 
     @Override
@@ -56,21 +60,6 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
         holder.highlightURL.setText("From webpage: "+articleList.getUrl());
         holder.highlightText.setText(articleList.getHighlight());
 
-        //final String a=holder.highlightURL.toString();
-
-//        holder.openHighlight.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(ct, "Gon gon", Toast.LENGTH_SHORT).show();
-//                try {
-//                    ct.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com")));
-//                }
-//                catch (Exception e)
-//                {
-//                    Toast.makeText(ct, "LUL "+e.toString(), Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
     }
 
     @Override
@@ -78,38 +67,53 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
         return articleLists.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener{
+        OnRecyclerViewItemClickListener onRecyclerViewItemClickListener;
         TextView highlightURL;
         TextView highlightText;
-        Button copyHighlight, openHighlight, deleteHighlight;
-       // buttonOnClickListener mbuttonOnClickListener;
-
-//        OnRecyclerViewItemClickListener onRecyclerViewItemClickListener;
+        OnRecyclerViewItemLongClickListener onRecyclerViewItemLongClickListener;
 
 
-        public ViewHolder(@NonNull View itemView) {
+
+        public ViewHolder(@NonNull View itemView,
+                          OnRecyclerViewItemClickListener onRecyclerViewItemClickListener,
+                          OnRecyclerViewItemLongClickListener monRecyclerViewItemLongClickListener){
             super(itemView);
-            highlightURL=itemView.findViewById(R.id.link_details);
-            highlightText=itemView.findViewById(R.id.highlight_details);
-            copyHighlight=itemView.findViewById(R.id.copy_highlight);
-            openHighlight=itemView.findViewById(R.id.open_highlight);
-            deleteHighlight=itemView.findViewById(R.id.delete_highlight);
+            highlightURL = itemView.findViewById(R.id.link_details);
+            highlightText = itemView.findViewById(R.id.highlight_details);
 
-            //mbuttonOnClickListener=(buttonOnClickListener)openHighlight;
+            this.onRecyclerViewItemClickListener=onRecyclerViewItemClickListener;
 
-            };
+            this.onRecyclerViewItemLongClickListener=monRecyclerViewItemLongClickListener;
 
-//        @Override
-//        public void onClick(View view) {
-//           // this.mbuttonOnClickListener = mbuttonOnClickListener;
-//
-//        }
-
-//            this.onRecyclerViewItemClickListener=onRecyclerViewItemClickListener;
-
-
-
+            itemView.setOnClickListener(this);
+            itemView.setOnLongClickListener(this);
         }
+
+
+        @Override
+        public void onClick(View view) {
+            onRecyclerViewItemClickListener.onRecyclerViewItemClicked(getAdapterPosition());
+        }
+
+        @Override
+        public boolean onLongClick(View view) {
+            onRecyclerViewItemLongClickListener.onRecyclerViewItemLongClicked(getAdapterPosition());
+            return true;
+        }
+    }
+
+    public interface OnRecyclerViewItemClickListener
+    {
+        //public void onRecyclerViewItemClicked(View v, int position);
+        void onRecyclerViewItemClicked(int position);
+    }
+    public interface OnRecyclerViewItemLongClickListener
+    {
+        //public void onRecyclerViewItemClicked(View v, int position);
+        void onRecyclerViewItemLongClicked(int position);
+    }
+
 
     }
 

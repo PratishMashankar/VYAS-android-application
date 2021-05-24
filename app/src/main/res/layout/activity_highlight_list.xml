@@ -39,15 +39,10 @@
                     android:layout_gravity="center_horizontal"
                     android:gravity="center">
 
-                        <Button
-                            android:id="@+id/copy_highlight"
-                            android:text="Copy"/>
-                        <Button
-                            android:id="@+id/open_highlight"
-                            android:text="Open"/>
-                        <Button
-                            android:id="@+id/delete_highlight"
-                            android:text="Yeet"/>
+                        <TextView
+                                android:text="Long press to delete this Highlight"
+                                android:textSize="8dp"
+                            android:textColor="@color/colorRed"/>
 
                 </TableRow>
         </TableLayout>

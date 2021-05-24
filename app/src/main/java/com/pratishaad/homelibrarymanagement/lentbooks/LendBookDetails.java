@@ -18,6 +18,7 @@ import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.pratishaad.homelibrarymanagement.MainActivity;
 import com.pratishaad.homelibrarymanagement.R;
 import com.pratishaad.homelibrarymanagement.viewbooks.ViewBooks;
 
@@ -92,13 +93,13 @@ public class LendBookDetails extends AppCompatActivity {
 
     @SuppressWarnings("deprecation")
     public void setLendDate(View view) {
-        showDialog(999);
+        showDialog(998);
     }
 
     @SuppressWarnings("deprecation")
     public void setReceiveDate(View view)
     {
-        showDialog(998);
+        showDialog(999);
     }
 
     @SuppressWarnings("deprecation")
@@ -106,11 +107,11 @@ public class LendBookDetails extends AppCompatActivity {
     protected Dialog onCreateDialog(int id) {
         this.id=id;
         // TODO Auto-generated method stub
-        if (id == 999) {
+        if (id == 998) {
             return new DatePickerDialog(this,
                     myDateListener, year, month, day);
         }
-        else if(id == 998)
+        else if(id == 999)
         {
             return new DatePickerDialog(this, myDateListener,year,month,day);
         }
@@ -122,24 +123,25 @@ public class LendBookDetails extends AppCompatActivity {
                 @Override
                 public void onDateSet(DatePicker arg0,
                                       int arg1, int arg2, int arg3) {
-                    // TODO Auto-generated method stub
-                    // arg1 = year
-                    // arg2 = month
-                    // arg3 = day
                     showDate(arg1, arg2+1, arg3);
                 }
             };
 
     private void showDate(int year, int month, int day) {
-        if (id==999) {
+        if (id==998) {
             lendGiveDate.setText(new StringBuilder().append(day).append("/")
                     .append(month).append("/").append(year));
         }
-        else if (id == 998)
+        else if (id == 999)
         {
             lendReceiveDate.setText(new StringBuilder().append(day).append("/")
                     .append(month).append("/").append(year));
         }
+    }
+
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), ViewBooks.class);
+        startActivity(intent);
     }
 
 }

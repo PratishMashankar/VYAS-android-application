@@ -1,11 +1,14 @@
 package com.pratishaad.homelibrarymanagement.bibliophilecompanion;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,6 +20,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.pratishaad.homelibrarymanagement.MainActivity;
 import com.pratishaad.homelibrarymanagement.R;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,6 +33,7 @@ public class ViewHighlights extends AppCompatActivity {
     RecyclerView rv;
     List<Highlights> articleLists;
     DatabaseReference databaseReference;
+    String projectname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +47,8 @@ public class ViewHighlights extends AppCompatActivity {
         rv.setHasFixedSize(true);
 
         Bundle extras=getIntent().getExtras();
-        final String projectname= (String) extras.get("Project Name");
+        projectname= (String) extras.get("Project Name");
+
 
         rv.setLayoutManager(new LinearLayoutManager(this));
         DividerItemDecoration decoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
@@ -62,7 +68,46 @@ public class ViewHighlights extends AppCompatActivity {
                     Highlights articleList = di.getValue(Highlights.class);
                     articleLists.add(articleList);
                 }
-                HighlightAdapter adapter = new HighlightAdapter(articleLists, getApplicationContext());
+                HighlightAdapter adapter = new HighlightAdapter(articleLists, getApplicationContext(),
+
+                        new HighlightAdapter.OnRecyclerViewItemClickListener() {
+                    @Override
+                    public void onRecyclerViewItemClicked(int position) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(articleLists.get(position).getUrl()));
+                        startActivity(intent);
+                    }
+                },
+                        new HighlightAdapter.OnRecyclerViewItemLongClickListener() {
+                    @Override
+                    public void onRecyclerViewItemLongClicked(final int position) {
+
+                        AlertDialog.Builder builder = new AlertDialog.Builder(ViewHighlights.this);
+                        builder.setTitle("Confirm Delete")
+                                .setMessage("Do you really want to delete the Highlight")
+                                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+
+                                        String highlightId=articleLists.get(position).getHighlightID();
+                                        databaseReference.child(highlightId).removeValue();
+                                        Toast.makeText(getApplicationContext(),"Highlight Deleted", Toast.LENGTH_LONG).show();
+
+                                        Intent intent=new Intent(getApplicationContext(),ViewHighlights.class);
+                                        intent.putExtra("Project Name",projectname);
+                                        startActivity(intent);
+
+                                    }
+                                })
+                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        dialogInterface.cancel();
+                                    }
+                                });
+                        AlertDialog alertDialog = builder.create();
+                        alertDialog.show();
+
+                    }
+                });
 
                 rv.setAdapter(adapter);
             }
@@ -75,4 +120,11 @@ public class ViewHighlights extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onBackPressed() {
+        Intent  intent=new Intent(getApplicationContext(),ProjectDetails.class);
+        intent.putExtra("Project Name", projectname);
+        startActivity(intent);
+    }
+
 }

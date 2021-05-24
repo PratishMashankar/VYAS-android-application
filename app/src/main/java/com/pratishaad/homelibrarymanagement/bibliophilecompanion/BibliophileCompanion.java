@@ -113,9 +113,9 @@ public class BibliophileCompanion extends AppCompatActivity {
                             public void onReceiveValue(String value)
                             {
                                 try {
-                                    Highlights highlights = new Highlights(highlightURL, value);
-
                                     String highlightID=databaseReference.child("Projects").child(projectname).push().getKey();
+
+                                    Highlights highlights = new Highlights(highlightURL, value, highlightID);
 
                                     databaseReference.child("Projects").child(projectname).child(highlightID).setValue(highlights);
 

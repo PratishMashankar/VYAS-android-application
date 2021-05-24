@@ -163,7 +163,10 @@ public class AddBook extends AppCompatActivity {
         else if((view.toString()).equals(findViewById(R.id.authimg).toString())) startActivityForResult(intent, 102);
         else if((view.toString()).equals(findViewById(R.id.ifbnimg).toString())) startActivityForResult(intent, 103);
         else if((view.toString()).equals(findViewById(R.id.descimg).toString())) startActivityForResult(intent, 104);
+
+
     }
+
     @Override
     protected void onActivityResult(final int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
