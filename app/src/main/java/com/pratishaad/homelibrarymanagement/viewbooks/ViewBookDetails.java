@@ -22,7 +22,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
 import com.pratishaad.homelibrarymanagement.Book;
-import com.pratishaad.homelibrarymanagement.MainActivity;
 import com.pratishaad.homelibrarymanagement.lentbooks.LendBookDetails;
 import com.pratishaad.homelibrarymanagement.R;
 
@@ -43,7 +42,7 @@ public class ViewBookDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_book_details);
 
-        mCoverImage=(ImageView)findViewById(R.id.viewBookDetailsImageView);
+        mCoverImage=(ImageView)findViewById(R.id.editBookImageView);
 
         bookTitle = (TextView)findViewById(R.id.book_title);
         bookAuthor = (TextView)findViewById(R.id.book_author);
@@ -125,7 +124,20 @@ public class ViewBookDetails extends AppCompatActivity {
         editBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(), EditBook.class);
+                intent.putExtra("Image",extras.getString("Image"));
+                intent.putExtra("Title",extras.getString("Title"));
+                intent.putExtra("Author", extras.getString("Author"));
+                intent.putExtra("ISBN", extras.getString("ISBN"));
+                intent.putExtra("Description",extras.getString("Description"));
+                intent.putExtra("Genre", extras.getString("Genre"));
+                intent.putExtra("CurrentReadBool", extras.getString("CurrentReadBool"));
+                intent.putExtra("LendBool", extras.getString("LendBool"));
+                intent.putExtra("Lendee", extras.getString("Lendee"));
+                intent.putExtra("GiveDate", extras.getString("GiveDate"));
+                intent.putExtra("ReceiveDate",extras.getString("ReceiveDate"));
+                intent.putExtra("BookID",extras.getString("BookID"));
+                startActivity(intent);
             }
         });
 
@@ -195,7 +207,7 @@ public class ViewBookDetails extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ViewBooks.class);
         startActivity(intent);
     }
 }

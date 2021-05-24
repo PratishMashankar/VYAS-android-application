@@ -62,27 +62,7 @@ public class ViewHighlights extends AppCompatActivity {
                     Highlights articleList = di.getValue(Highlights.class);
                     articleLists.add(articleList);
                 }
-                HighlightAdapter adapter = new HighlightAdapter(articleLists, getApplicationContext(),
-                new HighlightAdapter.buttonOnClickListener() {
-                    @Override
-                    public void onClickOpen(int position) {
-
-
-                    }
-//                    @Override
-//                    public void onRecyclerViewItemClicked(int position) {
-//                        Toast.makeText(getApplicationContext(),"Link opening",Toast.LENGTH_LONG).show();
-//                        try {
-//                            Uri uri = Uri.parse(articleLists.get(position).getUrl());
-//                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-//                            startActivity(intent);
-//                        }
-//                        catch (Exception e)
-//                        {
-//                            Toast.makeText(getApplicationContext(),"Error "+e,Toast.LENGTH_LONG);
-//                        }
-//                    }
-                });
+                HighlightAdapter adapter = new HighlightAdapter(articleLists, getApplicationContext());
 
                 rv.setAdapter(adapter);
             }

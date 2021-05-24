@@ -26,15 +26,15 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
 
     List<Highlights>articleLists;
     Context ct;
-    buttonOnClickListener buttonOnClickListener;
+    //buttonOnClickListener buttonOnClickListener;
 
     public HighlightAdapter(){}
 
-    public HighlightAdapter(List<Highlights> articleLists, Context ct, buttonOnClickListener buttonOnClickListener) {
-        this.articleLists = articleLists;
-        this.ct = ct;
-        this.buttonOnClickListener=buttonOnClickListener;
-    }
+//    public HighlightAdapter(List<Highlights> articleLists, Context ct, buttonOnClickListener buttonOnClickListener) {
+//        this.articleLists = articleLists;
+//        this.ct = ct;
+//        //this.buttonOnClickListener=buttonOnClickListener;
+//    }
 
     public HighlightAdapter(List<Highlights> articleLists, Context applicationContext) {
         this.articleLists = articleLists;
@@ -45,7 +45,7 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_highlight_list,parent,false);
-        return new ViewHolder(view, buttonOnClickListener);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -56,21 +56,21 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
         holder.highlightURL.setText("From webpage: "+articleList.getUrl());
         holder.highlightText.setText(articleList.getHighlight());
 
-        final String a=holder.highlightURL.toString();
+        //final String a=holder.highlightURL.toString();
 
-        holder.openHighlight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(ct, "Gon gon", Toast.LENGTH_SHORT).show();
-                try {
-                    ct.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com")));
-                }
-                catch (Exception e)
-                {
-                    Toast.makeText(ct, "LUL "+e.toString(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+//        holder.openHighlight.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(ct, "Gon gon", Toast.LENGTH_SHORT).show();
+//                try {
+//                    ct.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com")));
+//                }
+//                catch (Exception e)
+//                {
+//                    Toast.makeText(ct, "LUL "+e.toString(), Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
     }
 
     @Override
@@ -78,16 +78,16 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
         return articleLists.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         TextView highlightURL;
         TextView highlightText;
         Button copyHighlight, openHighlight, deleteHighlight;
-        buttonOnClickListener mbuttonOnClickListener;
+       // buttonOnClickListener mbuttonOnClickListener;
 
 //        OnRecyclerViewItemClickListener onRecyclerViewItemClickListener;
 
 
-        public ViewHolder(@NonNull View itemView, HighlightAdapter.buttonOnClickListener mbuttonOnClickListener) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             highlightURL=itemView.findViewById(R.id.link_details);
             highlightText=itemView.findViewById(R.id.highlight_details);
@@ -95,26 +95,21 @@ public class HighlightAdapter extends RecyclerView.Adapter<HighlightAdapter.View
             openHighlight=itemView.findViewById(R.id.open_highlight);
             deleteHighlight=itemView.findViewById(R.id.delete_highlight);
 
-            mbuttonOnClickListener=(buttonOnClickListener)openHighlight;
+            //mbuttonOnClickListener=(buttonOnClickListener)openHighlight;
 
             };
 
-        @Override
-        public void onClick(View view) {
-            this.mbuttonOnClickListener = mbuttonOnClickListener;
-
-        }
+//        @Override
+//        public void onClick(View view) {
+//           // this.mbuttonOnClickListener = mbuttonOnClickListener;
+//
+//        }
 
 //            this.onRecyclerViewItemClickListener=onRecyclerViewItemClickListener;
 
 
 
         }
-
-    public interface buttonOnClickListener
-    {
-        void onClickOpen(int position);
-    }
 
     }
 

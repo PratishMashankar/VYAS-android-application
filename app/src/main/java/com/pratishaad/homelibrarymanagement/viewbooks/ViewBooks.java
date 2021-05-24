@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.pratishaad.homelibrarymanagement.Book;
+import com.pratishaad.homelibrarymanagement.MainActivity;
 import com.pratishaad.homelibrarymanagement.R;
 
 import java.util.ArrayList;
@@ -85,5 +86,9 @@ public class ViewBooks extends AppCompatActivity {
 
             }
         });
+    }
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
 }
