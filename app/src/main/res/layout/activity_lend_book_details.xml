@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    tools:context=".lentbooks.LendBookDetails"
+    >
+
+    <TextView
+        android:id="@+id/lendBookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Book Name"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lendImageView" />
+
+    <ImageView
+        android:id="@+id/lendImageView"
+        android:layout_width="194dp"
+        android:layout_height="242dp"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/darker_gray"
+        android:elevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/lendAuthorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Author Name"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lendBookName" />
+
+    <EditText
+        android:id="@+id/lendeeName"
+        android:layout_width="239dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="36dp"
+        android:drawableStart="@drawable/ic_outline_person_24"
+        android:drawablePadding="10dp"
+        android:hint="Enter Lendee Name"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lendAuthorName" />
+
+
+    <TextView
+        android:id="@+id/lendGiveDate"
+        android:layout_width="239dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_baseline_calendar"
+        android:drawablePadding="10dp"
+        android:textAlignment="gravity"
+        android:gravity="center_vertical"
+        android:hint="Enter Give-date"
+        android:onClick="setLendDate"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lendeeName" />
+
+    <TextView
+        android:id="@+id/lendReceiveDate"
+        android:layout_width="239dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_baseline_calendar"
+        android:textAlignment="gravity"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:hint="Enter receive date"
+        android:onClick="setReceiveDate"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lendGiveDate" />
+
+    <Button
+        android:id="@+id/confirmButtonLend"
+        android:layout_width="216dp"
+        android:layout_height="70dp"
+        android:background="@drawable/rounded_corners"
+        android:text="Confirm Lend Book"
+        android:textColor="@color/bgcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lendReceiveDate"
+        app:layout_constraintVertical_bias="0.404" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

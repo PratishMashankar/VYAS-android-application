@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">VYAS</string>
+
+    <string-array name="genre">
+        <item>Adventure</item>
+        <item>Biography</item>
+        <item>Crime and Mystery</item>
+        <item>Fantasy</item>
+        <item>Horror</item>
+        <item>Non Fiction</item>
+        <item>Regional</item>
+        <item>Religion</item>
+        <item>Religion Story</item>
+        <item>Romance</item>
+        <item>Sci-fi</item>
+        <item>Spirituality</item>
+    </string-array>
+</resources>
