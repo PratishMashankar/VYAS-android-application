@@ -4,22 +4,27 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon_vyas"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/icon_vyas"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".LendBookDetails"></activity>
-        <activity android:name=".ViewBookDetails" />
-        <activity android:name=".BibliophileCompanion" />
-        <activity android:name=".ViewLentBooks" />
-        <activity android:name=".LendBook" />
-        <activity android:name=".ViewBooks" />
-        <activity android:name=".AddBook" />
+        android:theme="@style/CustomTheme">
+
+        <activity android:name=".bibliophilecompanion.ViewHighlights"></activity>
+        <activity android:name=".bibliophilecompanion.ProjectDetails" />
+        <activity android:name=".bibliophilecompanion.AllProjects" />
+        <activity android:name=".viewbooks.EditBook" />
+        <activity android:name=".bookrecommendation.BookRecommendation" />
+        <activity android:name=".lentbooks.LendBookDetails" />
+        <activity android:name=".viewbooks.ViewBookDetails" />
+        <activity android:name=".bibliophilecompanion.BibliophileCompanion" />
+        <activity android:name=".lentbooks.ViewLentBooks" />
+        <activity android:name=".viewbooks.ViewBooks" />
+        <activity android:name=".addbooks.AddBook" />
         <activity android:name=".MainActivity" /> <!-- To use multiple models: android:value="ocr,model2,model3" -->
         <!-- To use multiple models: android:value="ocr,model2,model3" -->
-        <activity android:name=".Login" />
-        <activity android:name=".Register">
+        <activity android:name=".authentication.Login" />
+        <activity android:name=".authentication.Register">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,9 +56,9 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewbooks.EditBook">
+
+    <ImageView
+        android:id="@+id/editBookImageView"
+        android:layout_width="168dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="339dp"
+        android:layout_height="297dp"
+        android:layout_marginTop="48dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editBookImageView">
+
+        <TableLayout
+            android:id="@+id/tableLayout3"
+            android:layout_width="320dp"
+            android:layout_height="324dp"
+            tools:layout_editor_absoluteY="311dp">
+
+            <TableRow
+                android:layout_width="335dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/h1"
+                    android:layout_width="130dp"
+                    android:background="#750303"
+                    android:text="Title:"
+                    android:textColor="#F4EFEF"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/editTitle"
+                    android:textSize="15dp"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/h2"
+                    android:layout_width="96dp"
+                    android:background="#5F2A93"
+                    android:text="Author:"
+                    android:textColor="#F4EFEF"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editAuthor"
+                    android:textSize="15dp"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/h3"
+                    android:layout_width="96dp"
+                    android:background="#750303"
+                    android:text="ISBN:"
+                    android:textColor="#F4EFEF"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editISBN"
+                    android:textSize="15dp"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/h4"
+                    android:layout_width="96dp"
+                    android:background="#5F2A93"
+                    android:text="Genre:"
+                    android:textColor="#F4EFEF"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editGenre"
+                    android:textSize="15dp"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/h5"
+                    android:layout_width="96dp"
+                    android:background="#750303"
+                    android:text="Description:"
+                    android:textColor="#F4EFEF"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editDescription"
+                    android:textSize="15dp"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/h6"
+                    android:layout_width="96dp"
+                    android:background="#5F2A93"
+                    android:text="Currently Reading:"
+                    android:textColor="#F4EFEF"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editCurrentlyReading"
+                    android:textSize="15dp"
+                    />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/updateEditChanges"
+                android:layout_width="164dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_corners"
+                android:textColor="@android:color/white"
+                android:text="Update" />
+
+            <Button
+                android:id="@+id/cancelEditChanges"
+                android:layout_width="164dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@android:color/darker_gray"
+                android:text="Cancel" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

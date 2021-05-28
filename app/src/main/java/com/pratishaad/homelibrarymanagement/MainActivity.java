@@ -1,49 +1,63 @@
 package com.pratishaad.homelibrarymanagement;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.google.firebase.auth.FirebaseAuth;
+import com.pratishaad.homelibrarymanagement.addbooks.AddBook;
+import com.pratishaad.homelibrarymanagement.authentication.Login;
+import com.pratishaad.homelibrarymanagement.bibliophilecompanion.AllProjects;
+import com.pratishaad.homelibrarymanagement.bookrecommendation.BookRecommendation;
+import com.pratishaad.homelibrarymanagement.lentbooks.ViewLentBooks;
+import com.pratishaad.homelibrarymanagement.viewbooks.ViewBooks;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button viewbooks;
-    Button addbook;
-    Button lendbooks;
-    Button viewlentbooks;
+    CardView viewbooks,addbook,lendbooks,viewlentbooks,allprojects,recommendation;
     Button logout;
-    Button bibcom;
     FirebaseAuth fAuth;
+    CardView cardView;
+    private Object CardView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        action bar settings
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.custom_action_bar_layout);
+        View view =getSupportActionBar().getCustomView();
 
-        viewbooks = (Button) findViewById(R.id.viewbooks);
-        addbook = (Button) findViewById(R.id.addbook);
-        lendbooks = (Button) findViewById(R.id.lendbooks);
-        viewlentbooks = (Button) findViewById(R.id.viewlentbooks);
+        viewbooks = (CardView) findViewById(R.id.viewbooks);
+        addbook = (CardView) findViewById(R.id.addbook);
+        lendbooks = (CardView) findViewById(R.id.lendbooks);
+        viewlentbooks = (CardView) findViewById(R.id.viewlentbooks);
         logout = (Button) findViewById(R.id.logoutbtn);
-        bibcom = (Button) findViewById(R.id.bibcom) ;
+        allprojects = (CardView) findViewById(R.id.allprojects) ;
+        recommendation = (CardView) findViewById(R.id.bookrecommendation) ;
         fAuth = FirebaseAuth.getInstance();
 
         viewbooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),ViewBooks.class));
+                startActivity(new Intent(getApplicationContext(), ViewBooks.class));
             }
         });
 
         addbook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),AddBook.class);
+                Intent i = new Intent(getApplicationContext(), AddBook.class);
                 startActivity(i);
             }
         });
@@ -51,21 +65,28 @@ public class MainActivity extends AppCompatActivity {
         lendbooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),LendBook.class));
+                startActivity(new Intent(getApplicationContext(),ViewBooks.class));
             }
         });
 
         viewlentbooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),ViewLentBooks.class));
+                startActivity(new Intent(getApplicationContext(), ViewLentBooks.class));
             }
         });
 
-        bibcom.setOnClickListener(new View.OnClickListener() {
+        allprojects.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),BibliophileCompanion.class));
+                startActivity(new Intent(getApplicationContext(), AllProjects.class));
+            }
+        });
+
+        recommendation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), BookRecommendation.class));
             }
         });
 
@@ -83,5 +104,25 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage("Do you want to exit application?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    // do something when the button is clicked
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        finishAffinity();
+                        System.exit(0);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    // do something when the button is clicked
+                    public void onClick(DialogInterface arg0, int arg1) {
+                    }
+                })
+                .show();
+
     }
 }
