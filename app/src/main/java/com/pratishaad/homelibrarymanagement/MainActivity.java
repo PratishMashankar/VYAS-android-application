@@ -1,59 +1,50 @@
 package com.pratishaad.homelibrarymanagement;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.ValueEventListener;
 import com.pratishaad.homelibrarymanagement.addbooks.AddBook;
 import com.pratishaad.homelibrarymanagement.authentication.Login;
 import com.pratishaad.homelibrarymanagement.bibliophilecompanion.AllProjects;
 import com.pratishaad.homelibrarymanagement.bookrecommendation.BookRecommendation;
 import com.pratishaad.homelibrarymanagement.lentbooks.ViewLentBooks;
-import com.pratishaad.homelibrarymanagement.viewbooks.ViewBookDetails;
 import com.pratishaad.homelibrarymanagement.viewbooks.ViewBooks;
-
-import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button viewbooks;
-    Button addbook;
-    Button lendbooks;
-    Button viewlentbooks;
+    CardView viewbooks,addbook,lendbooks,viewlentbooks,allprojects,recommendation;
     Button logout;
-    Button allprojects;
-    Button recommendation;
     FirebaseAuth fAuth;
+    CardView cardView;
+    private Object CardView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        action bar settings
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.custom_action_bar_layout);
         View view =getSupportActionBar().getCustomView();
 
-        viewbooks = (Button) findViewById(R.id.viewbooks);
-        addbook = (Button) findViewById(R.id.addbook);
-        lendbooks = (Button) findViewById(R.id.lendbooks);
-        viewlentbooks = (Button) findViewById(R.id.viewlentbooks);
+        viewbooks = (CardView) findViewById(R.id.viewbooks);
+        addbook = (CardView) findViewById(R.id.addbook);
+        lendbooks = (CardView) findViewById(R.id.lendbooks);
+        viewlentbooks = (CardView) findViewById(R.id.viewlentbooks);
         logout = (Button) findViewById(R.id.logoutbtn);
-        allprojects = (Button) findViewById(R.id.allprojects) ;
-        recommendation = (Button) findViewById(R.id.bookrecommendation) ;
+        allprojects = (CardView) findViewById(R.id.allprojects) ;
+        recommendation = (CardView) findViewById(R.id.bookrecommendation) ;
         fAuth = FirebaseAuth.getInstance();
 
         viewbooks.setOnClickListener(new View.OnClickListener() {
@@ -117,22 +108,21 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setTitle("Confirm Exit")
-                .setMessage("Do you really want to exit the application")
+        new AlertDialog.Builder(this)
+                .setMessage("Do you want to exit application?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
+                    // do something when the button is clicked
+                    public void onClick(DialogInterface arg0, int arg1) {
                         finishAffinity();
                         System.exit(0);
-                            }
-                        })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
                     }
-                });
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    // do something when the button is clicked
+                    public void onClick(DialogInterface arg0, int arg1) {
+                    }
+                })
+                .show();
+
     }
 }

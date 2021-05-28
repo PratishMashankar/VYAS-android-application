@@ -14,12 +14,15 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.pratishaad.homelibrarymanagement.R;
+
+import java.util.Objects;
 
 public class BibliophileCompanion extends AppCompatActivity {
     WebView mWebView;
@@ -37,6 +40,10 @@ public class BibliophileCompanion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bibliophile_companion);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.custom_action_bar_layout);
+        View view =getSupportActionBar().getCustomView();
 
         mWebView = (WebView) findViewById(R.id.webView);
         searchBtn = (ImageButton) findViewById(R.id.searchBtn);

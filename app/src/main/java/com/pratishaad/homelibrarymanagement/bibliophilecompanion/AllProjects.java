@@ -1,45 +1,35 @@
 package com.pratishaad.homelibrarymanagement.bibliophilecompanion;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.pratishaad.homelibrarymanagement.MainActivity;
 import com.pratishaad.homelibrarymanagement.R;
 
 public class AllProjects extends AppCompatActivity {
 
-    Button project1,project2,project3,project4;
+    CardView project1,project2,project3,project4;
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                this.finish();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_projects);
+
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.custom_action_bar_layout);
         View view =getSupportActionBar().getCustomView();
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back);
 
-        project1 = (Button) findViewById(R.id.project1);
-        project2 = (Button) findViewById(R.id.project2);
-        project3 = (Button) findViewById(R.id.project3);
-        project4 = (Button) findViewById(R.id.project4);
+        project1 = (CardView) findViewById(R.id.project1);
+        project2 = (CardView) findViewById(R.id.project2);
+        project3 = (CardView) findViewById(R.id.project3);
+        project4 = (CardView) findViewById(R.id.project4);
 
         project1.setOnClickListener(new View.OnClickListener() {
             @Override

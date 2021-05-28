@@ -4,9 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_wave"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,11 +13,9 @@
 
         <TextView
             android:id="@+id/title"
-            android:layout_marginTop="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5sp"
-            android:text="Welcome to your Workspace"
+            android:text="Your own library"
             android:layout_gravity="center_horizontal"
             android:textStyle="bold"
             android:textSize="25sp"
@@ -37,7 +33,7 @@
 
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/addbook"
+                android:id="@+id/addbooks"
                 android:layout_height="150dp"
                 android:layout_width="120dp"
                 android:layout_row="0"
@@ -73,7 +69,6 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/viewbooks"
                 android:layout_height="150dp"
                 android:layout_width="120dp"
                 android:layout_row="0"
@@ -108,7 +103,6 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/allprojects"
                 android:layout_height="150dp"
                 android:layout_width="120dp"
                 android:layout_row="1"
@@ -143,7 +137,6 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/lendbooks"
                 android:layout_height="150dp"
                 android:layout_width="120dp"
                 android:layout_row="1"
@@ -167,18 +160,17 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_lend_book"/>
+                        android:src="@drawable/ic_baseline_view_books"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="Lend Book"
+                        android:text="View Lent Books"
                         android:textAlignment="center"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/bookrecommendation"
                 android:layout_height="150dp"
                 android:layout_width="120dp"
                 android:layout_row="2"
@@ -213,7 +205,6 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/viewlentbooks"
                 android:layout_height="150dp"
                 android:layout_width="120dp"
                 android:layout_row="2"
@@ -237,12 +228,12 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_view_books"/>
+                        android:src="@drawable/ic_baseline_lend_book"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="View Lent Books"
+                        android:text="Lend Book"
                         android:textAlignment="center"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -256,11 +247,10 @@
                 android:paddingBottom="15sp"
                 >
                 <Button
-                    android:id="@+id/logoutbtn"
-                    android:layout_width="120sp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corners"
-                    android:layout_marginTop="35sp"
+                    android:layout_marginTop="5sp"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"
                     android:text="Logout"
@@ -274,3 +264,4 @@
 
 
 </ScrollView>
+<!--This is a dummy layout for trying the design first before implementing it on the main layout-->
