@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -210,5 +211,15 @@ public class ViewBookDetails extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(getApplicationContext(), ViewBooks.class);
         startActivity(intent);
+    }
+
+    public void onOptionsItemSelected(View view) {
+        try {
+            Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + "vyas.contact.in@gmail.com"));
+            startActivity(intent);
+        } catch(Exception e) {
+            Toast.makeText(getApplicationContext(), "Sorry...You don't have any mail app", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        }
     }
 }

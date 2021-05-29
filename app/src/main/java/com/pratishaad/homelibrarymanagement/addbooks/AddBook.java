@@ -49,6 +49,7 @@ import com.google.mlkit.vision.text.Text;
 import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.TextRecognizer;
 import com.pratishaad.homelibrarymanagement.Book;
+import com.pratishaad.homelibrarymanagement.MainActivity;
 import com.pratishaad.homelibrarymanagement.R;
 
 import java.io.ByteArrayOutputStream;
@@ -114,11 +115,6 @@ public class AddBook extends AppCompatActivity {
         addbook=(Button)findViewById(R.id.addbook);
         clearbtn=(Button)findViewById(R.id.clear);
 
-        coverimg.setImageResource(R.drawable.camera);
-        titleimg.setImageResource(R.drawable.camera);
-        authimg.setImageResource(R.drawable.camera);
-        ifbnimg.setImageResource(R.drawable.camera);
-        descimg.setImageResource(R.drawable.camera);
 
         //authenticated user
         fAuth = FirebaseAuth.getInstance();
@@ -142,11 +138,6 @@ public class AddBook extends AppCompatActivity {
                 author.setText("");
                 ifbn.setText("");
                 desc.setText("");
-                coverimg.setImageResource(R.drawable.camera);
-                titleimg.setImageResource(R.drawable.camera);
-                authimg.setImageResource(R.drawable.camera);
-                ifbnimg.setImageResource(R.drawable.camera);
-                descimg.setImageResource(R.drawable.camera);
             }
         });
 
@@ -286,5 +277,15 @@ public class AddBook extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public void onOptionsItemSelected(View view) {
+        try {
+            Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + "vyas.contact.in@gmail.com"));
+            startActivity(intent);
+        } catch(Exception e) {
+            Toast.makeText(getApplicationContext(), "Sorry...You don't have any mail app", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        }
     }
 }

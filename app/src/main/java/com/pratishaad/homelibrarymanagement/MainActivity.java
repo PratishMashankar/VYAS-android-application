@@ -2,9 +2,11 @@ package com.pratishaad.homelibrarymanagement;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -24,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
     CardView viewbooks,addbook,lendbooks,viewlentbooks,allprojects,recommendation;
     Button logout;
     FirebaseAuth fAuth;
-    CardView cardView;
-    private Object CardView;
 
 
     @Override
@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.custom_action_bar_layout);
-        View view =getSupportActionBar().getCustomView();
+//        View view =getSupportActionBar().getCustomView();
+
 
         viewbooks = (CardView) findViewById(R.id.viewbooks);
         addbook = (CardView) findViewById(R.id.addbook);
@@ -123,6 +124,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .show();
+    }
 
+    public void onOptionsItemSelected(View view) {
+        try {
+            Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + "vyas.contact.in@gmail.com"));
+            startActivity(intent);
+        } catch(Exception e) {
+            Toast.makeText(MainActivity.this, "Sorry...You don't have any mail app", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        }
     }
 }

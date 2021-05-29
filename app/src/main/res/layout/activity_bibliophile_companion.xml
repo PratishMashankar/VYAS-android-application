@@ -8,65 +8,72 @@
 
     <EditText
         android:id="@+id/enterURL"
-        android:layout_width="344dp"
+        android:layout_width="300dp"
         android:layout_height="47dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:ems="10"
+        android:autofillHints="Enter URL"
         android:hint="Enter URL"
-        android:inputType="textPersonName"
+        android:inputType="textUri"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/searchBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:drawableStart="@drawable/ic_baseline_search"
+        android:drawablePadding="2sp"
+        android:text="Search"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/enterURL"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_search" />
+        tools:ignore="MissingConstraints" />
 
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="409dp"
-        android:layout_height="597dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterURL" />
 
-    <Button
-        android:id="@+id/highlightBtn"
-        android:layout_width="164dp"
-        android:layout_height="63dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="4dp"
-        android:text="Highlight"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/webView"
-        app:layout_constraintVertical_bias="0.583" />
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="409dp"
+            android:layout_height="597dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterURL" />
 
-    <Button
-        android:id="@+id/exitBtn"
-        android:layout_width="160dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="48dp"
-        android:text="exit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/highlightBtn"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/webView"
-        app:layout_constraintVertical_bias="0.437" />
-</androidx.constraintlayout.widget.ConstraintLayout>
-<!--<WebView  xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/webview"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+        <Button
+            android:id="@+id/highlightBtn"
+            android:layout_width="164dp"
+            android:layout_height="63dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/rounded_corners"
+            android:text="Highlight"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/webView"
+            app:layout_constraintVertical_bias="0.583" />
 
-    />-->
+        <Button
+            android:id="@+id/exitBtn"
+            android:layout_width="160dp"
+            android:layout_height="63dp"
+            android:background="@drawable/rounded_corners"
+            android:text="Exit"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/highlightBtn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/webView"
+            app:layout_constraintVertical_bias="0.437" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--<WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        />-->

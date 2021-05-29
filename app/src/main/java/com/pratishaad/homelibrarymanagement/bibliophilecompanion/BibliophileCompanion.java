@@ -1,5 +1,7 @@
 package com.pratishaad.homelibrarymanagement.bibliophilecompanion;
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -28,7 +30,7 @@ public class BibliophileCompanion extends AppCompatActivity {
     WebView mWebView;
     View loadingView;
     Button exitBtn, highlightBtn;
-    ImageButton searchBtn;
+    Button searchBtn;
     EditText enterURL;
 
     String highlightURL;
@@ -46,7 +48,7 @@ public class BibliophileCompanion extends AppCompatActivity {
         View view =getSupportActionBar().getCustomView();
 
         mWebView = (WebView) findViewById(R.id.webView);
-        searchBtn = (ImageButton) findViewById(R.id.searchBtn);
+        searchBtn = (Button) findViewById(R.id.searchBtn);
         exitBtn = (Button) findViewById(R.id.exitBtn);
         highlightBtn = (Button) findViewById(R.id.highlightBtn);
         enterURL = (EditText) findViewById(R.id.enterURL);
@@ -148,6 +150,16 @@ public class BibliophileCompanion extends AppCompatActivity {
 
         } else {
             super.onBackPressed();
+        }
+    }
+
+    public void onOptionsItemSelected(View view) {
+        try {
+            Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + "vyas.contact.in@gmail.com"));
+            startActivity(intent);
+        } catch(Exception e) {
+            Toast.makeText(getApplicationContext(), "Sorry...You don't have any mail app", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
         }
     }
 }

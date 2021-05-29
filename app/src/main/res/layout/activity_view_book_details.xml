@@ -20,9 +20,11 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="339dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
         android:layout_height="250dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="25dp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,8 +32,8 @@
 
         <TableLayout
             android:id="@+id/tableLayout3"
-            android:layout_width="320dp"
-            android:layout_height="324dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             tools:layout_editor_absoluteY="311dp">
 
             <TableRow
@@ -124,7 +126,7 @@
 
                 <TextView
                     android:id="@+id/h5"
-                    android:layout_width="96dp"
+                    android:layout_width="wrap_content"
                     android:paddingBottom="5dp"
                     android:text="Description:"
                     android:textColor="@android:color/black"
@@ -133,7 +135,10 @@
 
                 <TextView
                     android:id="@+id/book_description"
-                    android:paddingBottom="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:minLines="2"
                     android:text=""
                     android:textColor="@android:color/black"
                     android:textSize="20dp" />
@@ -253,7 +258,7 @@
         android:id="@+id/lendBook"
         android:layout_width="111dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10sp"
         android:background="@drawable/rounded_corners"
         android:backgroundTint="@android:color/holo_green_dark"
         android:text="LEND BOOK"
@@ -268,7 +273,7 @@
         android:id="@+id/receiveBook"
         android:layout_width="131dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10sp"
         android:background="@drawable/rounded_corners"
         android:text="Receive BOOK"
         android:textColor="@android:color/white"
@@ -299,6 +304,7 @@
                 android:layout_height="45dp"
                 android:background="@drawable/rounded_corners"
                 android:backgroundTint="@android:color/holo_red_dark"
+                android:layout_marginEnd="10sp"
                 android:text="Delete"
                 android:textColor="@android:color/white" />
 
@@ -306,6 +312,7 @@
                 android:id="@+id/editBook"
                 android:layout_width="111dp"
                 android:layout_height="45dp"
+                android:layout_marginStart="10sp"
                 android:background="@drawable/rounded_corners"
                 android:backgroundTint="@android:color/tertiary_text_dark"
                 android:text="Edit"

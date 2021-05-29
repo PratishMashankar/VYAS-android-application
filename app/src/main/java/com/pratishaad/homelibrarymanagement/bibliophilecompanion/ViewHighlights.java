@@ -145,4 +145,14 @@ public class ViewHighlights extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onOptionsItemSelected(View view) {
+        try {
+            Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + "vyas.contact.in@gmail.com"));
+            startActivity(intent);
+        } catch(Exception e) {
+            Toast.makeText(getApplicationContext(), "Sorry...You don't have any mail app", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        }
+    }
+
 }

@@ -8,9 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon_vyas"
         android:supportsRtl="true"
-        android:theme="@style/CustomTheme">
+        android:theme="@style/CustomTheme"
+        >
 
-        <activity android:name=".bibliophilecompanion.ViewHighlights"></activity>
+        <activity android:name=".bibliophilecompanion.ViewHighlights" />
         <activity android:name=".bibliophilecompanion.ProjectDetails" />
         <activity android:name=".bibliophilecompanion.AllProjects" />
         <activity android:name=".viewbooks.EditBook" />
