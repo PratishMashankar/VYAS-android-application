@@ -23,13 +23,11 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
     List<Book>articleLists;
     Context ct;
     OnRecyclerViewItemClickListener mOnRecyclerViewItemClickListener;
-
     public ArticleAdapter(List<Book> articleLists, Context ct, OnRecyclerViewItemClickListener mOnRecyclerViewItemClickListener) {
         this.articleLists = articleLists;
         this.ct = ct;
         this.mOnRecyclerViewItemClickListener=mOnRecyclerViewItemClickListener;
     }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -49,7 +47,6 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
                 "\nGenre: "+articleList.getBookGenre()+
                 "\nISBN: "+articleList.getBookISBN());
         holder.articlelent.setTextSize(14);
-
         holder.articlelent.setText(articleList.getLendBookBool());
         String a= (String) holder.articlelent.getText();
         try {
@@ -67,7 +64,6 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
             Toast.makeText(ct.getApplicationContext(), e.toString(),Toast.LENGTH_SHORT).show();
         }
     }
-
     @Override
     public int getItemCount() {
         return articleLists.size();
@@ -89,25 +85,17 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
             articledetails=itemView.findViewById(R.id.lend_book_details);
             articlelent=itemView.findViewById(R.id.article_lent_to);
             this.onRecyclerViewItemClickListener=onRecyclerViewItemClickListener;
-
-            //this.onRecyclerViewItemClickListener=onRecyclerViewItemClickListener;
-
             itemView.setOnClickListener(this);
-
-
         }
 
         @Override
         public void onClick(View view) {
-            //onRecyclerViewItemClickListener.onRecyclerViewItemClicked(view, getAdapterPosition());
             onRecyclerViewItemClickListener.onRecyclerViewItemClicked(getAdapterPosition());
         }
-
     }
 
     public interface OnRecyclerViewItemClickListener
     {
-        //public void onRecyclerViewItemClicked(View v, int position);
         void onRecyclerViewItemClicked(int position);
     }
 }

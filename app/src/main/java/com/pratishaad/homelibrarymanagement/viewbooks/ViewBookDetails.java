@@ -112,7 +112,8 @@ public class ViewBookDetails extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "Book has already been lent to "+extras.getString("Lendee"), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Book has already been lent to "+
+                            extras.getString("Lendee"), Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -124,7 +125,8 @@ public class ViewBookDetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(extras.getString("LendBool").equals("Yes")) {
-                    Toast.makeText(getApplicationContext(), "Book received from: " + extras.getString("Lendee"), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Book received from: " +
+                            extras.getString("Lendee"), Toast.LENGTH_SHORT).show();
                     databaseRef.child("lendBookBool").setValue("No");
                     databaseRef.child("lendGiveDate").setValue("N/A");
                     databaseRef.child("lendReceiveDate").setValue("N/A");
@@ -136,7 +138,8 @@ public class ViewBookDetails extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), ViewBooks.class);
                     startActivity(intent);
                 }
-                else Toast.makeText(getApplicationContext(), "Book not lent to anyone", Toast.LENGTH_SHORT).show();
+                else Toast.makeText(getApplicationContext(),
+                        "Book not lent to anyone", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -180,7 +183,9 @@ public class ViewBookDetails extends AppCompatActivity {
                                         final String delImg = b.getImageFirebaseURI();
 
                                         databaseRef.removeValue();
-                                        Toast.makeText(getApplicationContext(), delTitle.trim().replace("\n", " ") + " has been deleted.", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(),
+                                                delTitle.trim().replace("\n", " ") +
+                                                        " has been deleted.", Toast.LENGTH_LONG).show();
                                     }
 
                                     @Override
@@ -203,8 +208,6 @@ public class ViewBookDetails extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     @Override

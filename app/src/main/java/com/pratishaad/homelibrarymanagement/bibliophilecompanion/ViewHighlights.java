@@ -78,7 +78,6 @@ public class ViewHighlights extends AppCompatActivity {
 
     public void getDetails()
     {
-
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
@@ -87,7 +86,6 @@ public class ViewHighlights extends AppCompatActivity {
                     articleLists.add(articleList);
                 }
                 HighlightAdapter adapter = new HighlightAdapter(articleLists, getApplicationContext(),
-
                         new HighlightAdapter.OnRecyclerViewItemClickListener() {
                     @Override
                     public void onRecyclerViewItemClicked(int position) {
@@ -98,21 +96,18 @@ public class ViewHighlights extends AppCompatActivity {
                         new HighlightAdapter.OnRecyclerViewItemLongClickListener() {
                     @Override
                     public void onRecyclerViewItemLongClicked(final int position) {
-
                         AlertDialog.Builder builder = new AlertDialog.Builder(ViewHighlights.this);
                         builder.setTitle("Confirm Delete")
                                 .setMessage("Do you really want to delete the Highlight")
                                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int whichButton) {
-
                                         String highlightId=articleLists.get(position).getHighlightID();
                                         databaseReference.child(highlightId).removeValue();
-                                        Toast.makeText(getApplicationContext(),"Highlight Deleted", Toast.LENGTH_LONG).show();
-
+                                        Toast.makeText(getApplicationContext(),"Highlight Deleted",
+                                                Toast.LENGTH_LONG).show();
                                         Intent intent=new Intent(getApplicationContext(),ViewHighlights.class);
                                         intent.putExtra("Project Name",projectname);
                                         startActivity(intent);
-
                                     }
                                 })
                                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -123,20 +118,14 @@ public class ViewHighlights extends AppCompatActivity {
                                 });
                         AlertDialog alertDialog = builder.create();
                         alertDialog.show();
-
                     }
                 });
-
                 rv.setAdapter(adapter);
             }
-            
 
             @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
-
-            }
+            public void onCancelled(@NonNull @NotNull DatabaseError error) { }
         });
-
     }
     @Override
     public void onBackPressed() {

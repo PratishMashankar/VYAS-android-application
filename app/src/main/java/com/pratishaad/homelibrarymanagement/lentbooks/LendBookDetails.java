@@ -25,7 +25,10 @@ import com.pratishaad.homelibrarymanagement.MainActivity;
 import com.pratishaad.homelibrarymanagement.R;
 import com.pratishaad.homelibrarymanagement.viewbooks.ViewBooks;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class LendBookDetails extends AppCompatActivity {
 
@@ -49,8 +52,6 @@ public class LendBookDetails extends AppCompatActivity {
 
         lendTitle=(TextView)findViewById(R.id.lendBookName);
         lendAuthor=(TextView)findViewById(R.id.lendAuthorName);
-//        textGiveBook=(TextView)findViewById(R.id.textGiveDate);
-//        textReceiveBook=(TextView)findViewById(R.id.textReceiveDate);
         lendCoverImage=(ImageView)findViewById(R.id.lendImageView);
         lendeeName=(EditText)findViewById(R.id.lendeeName);
         lendGiveDate=(TextView) findViewById(R.id.lendGiveDate);
@@ -77,23 +78,45 @@ public class LendBookDetails extends AppCompatActivity {
         confirmButtonLend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String mLendee=lendeeName.getText().toString();
                 String mGiveDate=lendGiveDate.getText().toString();
                 String mReceiveDate=lendReceiveDate.getText().toString();
-                if(!mLendee.isEmpty() && !mGiveDate.isEmpty() && !mReceiveDate.isEmpty()){
-                    databaseRef.child("lendBookBool").setValue("Yes");
-                    databaseRef.child("lendLendeeName").setValue(mLendee);
-                    databaseRef.child("lendGiveDate").setValue(mGiveDate);
-                    databaseRef.child("lendReceiveDate").setValue(mReceiveDate);
-                    Toast.makeText(getApplicationContext(), "The book has been lent to "+mLendee, Toast.LENGTH_SHORT).show();
-                    Intent intent= new Intent(getApplicationContext(), ViewBooks.class);
-                    startActivity(intent);
+                Date gd=new Date();
+                Date rd = new Date();
+                SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
+                try {
+                    gd = sd.parse(mGiveDate);
+                    rd = sd.parse(mReceiveDate);
+                } catch (ParseException e) {
+                    e.printStackTrace();
                 }
-                else if(mLendee.isEmpty()) Toast.makeText(getApplicationContext(),"Enter Lendee Name",Toast.LENGTH_SHORT).show();
-                else if(mGiveDate.isEmpty()) Toast.makeText(getApplicationContext(),"Enter Give Date",Toast.LENGTH_SHORT).show();
-                else if(mReceiveDate.isEmpty()) Toast.makeText(getApplicationContext(),"Enter Receive Date",Toast.LENGTH_SHORT).show();
-                else Toast.makeText(getApplicationContext(),"Book Failed To Lend",Toast.LENGTH_SHORT).show();
+
+                if(!mLendee.isEmpty() && !mGiveDate.isEmpty() && !mReceiveDate.isEmpty()){
+                    if(gd.compareTo(rd)<=0){
+                        databaseRef.child("lendBookBool").setValue("Yes");
+                        databaseRef.child("lendLendeeName").setValue(mLendee);
+                        databaseRef.child("lendGiveDate").setValue(mGiveDate);
+                        databaseRef.child("lendReceiveDate").setValue(mReceiveDate);
+                        Toast.makeText(getApplicationContext(),
+                                "The book has been lent to "+mLendee, Toast.LENGTH_SHORT).show();
+                        Intent intent= new Intent(getApplicationContext(), ViewBooks.class);
+                        startActivity(intent);
+                    }
+                    else {
+                        lendReceiveDate.setError("Receive Date less than Give date");
+                        Toast.makeText(getApplicationContext(),
+                                "Receive Date less than Give date", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                }
+                else if(mLendee.isEmpty()) Toast.makeText(getApplicationContext(),
+                        "Enter Lendee Name",Toast.LENGTH_SHORT).show();
+                else if(mGiveDate.isEmpty()) Toast.makeText(getApplicationContext(),
+                        "Enter Give Date",Toast.LENGTH_SHORT).show();
+                else if(mReceiveDate.isEmpty()) Toast.makeText(getApplicationContext(),
+                        "Enter Receive Date",Toast.LENGTH_SHORT).show();
+                else Toast.makeText(getApplicationContext(),
+                            "Book Failed To Lend",Toast.LENGTH_SHORT).show();
             }
         });
 

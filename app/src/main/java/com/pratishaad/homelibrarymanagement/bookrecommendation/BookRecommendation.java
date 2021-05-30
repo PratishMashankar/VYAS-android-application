@@ -104,16 +104,15 @@ public class BookRecommendation extends AppCompatActivity {
                     int count=genres.get(check);
                     genres.put(check, count +1);
                 }
-
                 Map.Entry<String, Integer> maxEntry = null;
                 for (Map.Entry<String, Integer> entry : genres.entrySet()) {
                     if (maxEntry == null || entry.getValue()>maxEntry.getValue()) {
                         maxEntry = entry;
                     }
                 }
-
                 genre=maxEntry.getKey();
-                mWebView.loadUrl("https://www.amazon.in/s?k="+genre.trim().replace(" ","+")+"+books"+"&ref=nb_sb_noss_1");
+                mWebView.loadUrl("https://www.amazon.in/s?k="+genre
+                        .trim().replace(" ","+")+"+books"+"&ref=nb_sb_noss_1");
             }
 
             @Override

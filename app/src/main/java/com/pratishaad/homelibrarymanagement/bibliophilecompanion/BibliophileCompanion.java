@@ -112,32 +112,32 @@ public class BibliophileCompanion extends AppCompatActivity {
         highlightBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "highlight begin", Toast.LENGTH_SHORT).show();
                 highlightURL = mWebView.getUrl();
                 //Toast.makeText(getApplicationContext(), highlightURL, Toast.LENGTH_SHORT).show();
                 mWebView.evaluateJavascript("(function(){return window.getSelection().toString()})()",
                         new ValueCallback<String>()
+                        //value.replace("\"\"","").trim().length()
                         {
                             @Override
-                            public void onReceiveValue(String value)
-                            {
-                                try {
-                                    String highlightID=databaseReference.child("Projects").child(projectname).push().getKey();
-
-                                    Highlights highlights = new Highlights(highlightURL, value, highlightID);
-
-                                    databaseReference.child("Projects").child(projectname).child(highlightID).setValue(highlights);
-
-                                    Toast.makeText(getApplicationContext(), "Highlight added", Toast.LENGTH_SHORT).show();
-
-                                }catch (Exception e){
-                                    Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                            public void onReceiveValue(String value) {
+                                if (!(value.equals("\"\""))) {
+                                    try {
+                                        Toast.makeText(getApplicationContext(), "Highlight Begin", Toast.LENGTH_SHORT).show();
+                                        String highlightID = databaseReference.child("Projects").child(projectname).push().getKey();
+                                        Highlights highlights = new Highlights(highlightURL, value, highlightID);
+                                        databaseReference.child("Projects").child(projectname).child(highlightID).setValue(highlights);
+                                        Toast.makeText(getApplicationContext(), "Highlight added", Toast.LENGTH_SHORT).show();
+                                    } catch (Exception e) {
+                                        Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                else{
+                                    Toast.makeText(getApplicationContext(), "Select text to highlight.", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
             }
         });
-
     }
 
 

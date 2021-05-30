@@ -61,14 +61,11 @@ public class ViewBooks extends AppCompatActivity {
     private void getImageData() {
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
                 for (DataSnapshot di : dataSnapshot.getChildren()) {
                     Book articleList = di.getValue(Book.class);
                     articleLists.add(articleList);
                 }
-
                 ArticleAdapter adapter = new ArticleAdapter(articleLists, getApplicationContext(), new ArticleAdapter.OnRecyclerViewItemClickListener() {
                     @Override
                     public void onRecyclerViewItemClicked(int position) {
@@ -86,7 +83,6 @@ public class ViewBooks extends AppCompatActivity {
                         intent.putExtra("GiveDate", articleLists.get(position).getLendGiveDate());
                         intent.putExtra("ReceiveDate", articleLists.get(position).getLendReceiveDate());
                         intent.putExtra("BookID",articleLists.get(position).getBookId());
-
                         startActivity(intent);
                     }
                 });
@@ -95,7 +91,6 @@ public class ViewBooks extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         });
     }

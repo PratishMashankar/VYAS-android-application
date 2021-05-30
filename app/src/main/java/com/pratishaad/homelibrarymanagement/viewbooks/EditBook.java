@@ -77,11 +77,9 @@ public class EditBook extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(!(editCurrentlyReading.getText().toString().equals("Yes") || editCurrentlyReading.getText().toString().equals("No"))){
-                    //Toast.makeText(getApplicationContext(),editCurrentlyReading.getText(),Toast.LENGTH_SHORT).show();
                     editCurrentlyReading.setError("Enter either Yes or No");
                     return;
                 }
-
                 try {
                     if (!editTitle.getText().toString().equals(extras.getString("Title")))
                         databaseReference.child("bookTitle").setValue(editTitle.getText().toString());

@@ -91,8 +91,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

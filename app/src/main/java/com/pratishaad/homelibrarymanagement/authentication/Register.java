@@ -104,7 +104,6 @@ public class Register extends AppCompatActivity {
                             Toast.makeText(Register.this, "User registration successful", Toast.LENGTH_SHORT).show();
                             addUserIDToDatabase();
                             Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                            //i.putExtra("userID",userID);
                             startActivity(i);
                         }else {
                             Toast.makeText(Register.this, "ERROR ! "+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -114,7 +113,6 @@ public class Register extends AppCompatActivity {
                 });
             }
         });
-
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,9 +120,6 @@ public class Register extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
-
     }
     protected void addUserIDToDatabase(){
         String uid=fAuth.getUid();

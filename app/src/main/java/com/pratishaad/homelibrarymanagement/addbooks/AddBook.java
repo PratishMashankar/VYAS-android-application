@@ -173,7 +173,6 @@ public class AddBook extends AppCompatActivity {
 
         //set image to image view
         if(requestCode==105) {
-
             onCaptureImageResult(data);
             coverimg.setImageBitmap(bitmap);
         }
@@ -181,8 +180,6 @@ public class AddBook extends AppCompatActivity {
         else if(requestCode==102) authimg.setImageBitmap(bitmap);
         else if(requestCode==103) ifbnimg.setImageBitmap(bitmap);
         else if(requestCode==104) descimg.setImageBitmap(bitmap);
-
-
         //process the image to extract text
         InputImage image = InputImage.fromBitmap(bitmap, 0);
         TextRecognizer recognizer = TextRecognition.getClient();
@@ -192,7 +189,6 @@ public class AddBook extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<Text>() {
                             @Override
                             public void onSuccess(Text visionText) {
-                                //Toast.makeText(getApplicationContext(),visionText.getText(),Toast.LENGTH_SHORT).show();
                                 if(requestCode==101) title.setText(visionText.getText());
                                 else if(requestCode==102) author.setText(visionText.getText());
                                 else if(requestCode==103) ifbn.setText(visionText.getText());
@@ -208,8 +204,6 @@ public class AddBook extends AppCompatActivity {
                                     }
                                 });
     }
-
-
     //Convert captured title image to bit map
     private void onCaptureImageResult(Intent data) {
         Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
